@@ -234,7 +234,13 @@ def build_transforms(cfg: dict, training: bool):
         ])
 
     aug = cfg["train"]["augment"]
-    steps = [transforms.Resize((size, size))]
+    crop_scale = aug.get("random_resized_crop")
+    if crop_scale:
+        steps = [transforms.RandomResizedCrop(size, scale=(crop_scale, 1.0))]
+    else:
+        steps = [transforms.Resize((size, size))]
+    if aug.get("grayscale_prob"):
+        steps.append(transforms.RandomGrayscale(p=aug["grayscale_prob"]))
     if aug.get("horizontal_flip"):
         steps.append(transforms.RandomHorizontalFlip())
     if aug.get("vertical_flip"):

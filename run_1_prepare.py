@@ -11,6 +11,7 @@
   python run_1_prepare.py
 """
 
+import argparse
 import shutil
 import sys
 from pathlib import Path
@@ -26,7 +27,22 @@ from src.core import (
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--seed", type=int, default=None,
+        help="config.yaml 의 seed 를 덮어씁니다. 분할이 달라지므로 seed 를 바꿔 "
+             "여러 번 돌리면 결과가 우연에 얼마나 좌우되는지 볼 수 있습니다.",
+    )
+    parser.add_argument(
+        "--skip-nobg", action="store_true",
+        help="배경 제거 사본을 다시 만들지 않습니다. 사진은 그대로 두고 seed 만 "
+             "바꿔 다시 돌릴 때 씁니다 (사본은 seed 와 무관합니다).",
+    )
+    args = parser.parse_args()
+
     cfg = load_config()
+    if args.seed is not None:
+        cfg["seed"] = args.seed
     set_seed(cfg["seed"])
     classes = cfg["classes"]
     out_root = ensure_dir(cfg["output"]["root"])
@@ -155,7 +171,10 @@ def main() -> int:
         print(f"     저장: {manifest_dir / 'source_B.csv'}")
 
     # ---- 배경 제거 사본 ------------------------------------------------
-    if cfg["experiment"]["run_background_removed"] and (a.total or b.total):
+    if args.skip_nobg:
+        print()
+        print("  배경 제거 사본: 건너뜀 (--skip-nobg)")
+    elif cfg["experiment"]["run_background_removed"] and (a.total or b.total):
         print()
         print("-" * 62)
         print("  배경 제거 사본 생성 (대조 실험용)")

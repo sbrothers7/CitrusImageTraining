@@ -45,6 +45,21 @@ def main() -> int:
         help="같은 모델로 조건만 바꿔 여러 번 돌릴 때 결과를 results/<모델이름>_<tag>/ 에 따로 저장합니다.",
     )
     parser.add_argument(
+        "--seed", type=int, default=None,
+        help="config.yaml 의 seed 를 덮어씁니다. 같은 분할이라도 학습 결과가 달라지므로 "
+             "여러 seed 로 돌려 차이가 우연인지 확인하세요.",
+    )
+    parser.add_argument(
+        "--augment", choices=["config", "strong"], default="config",
+        help="strong 이면 회전·색변화를 키우고 무작위 확대와 흑백 변환을 더합니다. "
+             "촬영 조건에 덜 휘둘리는지 보려는 조건입니다.",
+    )
+    parser.add_argument(
+        "--train-on", choices=["raw", "nobg"], default="raw",
+        help="nobg 면 배경을 지운 사본으로 학습합니다 (data/nobg/). 모델이 배경을 "
+             "단서로 쓰는 것이 문제인지 보려는 조건입니다.",
+    )
+    parser.add_argument(
         "--train-fraction", type=float, default=1.0,
         help="학습 데이터의 일부만 씁니다 (병해별 비율 유지). 학습 장수를 늘리면 "
              "일반화가 좋아지는지 보려면 0.25, 0.5, 0.75, 1.0 으로 돌려 비교하세요.",
@@ -52,6 +67,14 @@ def main() -> int:
     args = parser.parse_args()
 
     cfg = load_config()
+    if args.seed is not None:
+        cfg["seed"] = args.seed
+    if args.augment == "strong":
+        cfg["train"]["augment"] = {
+            "horizontal_flip": True, "vertical_flip": True,
+            "rotation_degrees": 30, "color_jitter": 0.4,
+            "random_resized_crop": 0.7, "grayscale_prob": 0.2,
+        }
     set_seed(cfg["seed"])
     device = get_device()
     classes = cfg["classes"]
@@ -64,12 +87,25 @@ def main() -> int:
         return 1
 
     frame = pd.read_csv(manifest)
-    train_frame = frame[frame["split"] == "train"]
-    val_frame = frame[frame["split"] == "val"]
+    train_frame = frame[frame["split"] == "train"].copy()
+    val_frame = frame[frame["split"] == "val"].copy()
 
     if len(train_frame) == 0:
         print("[오류] 학습용 이미지가 없습니다.")
         return 1
+
+    if args.train_on == "nobg":
+        # 배경 제거 사본은 구조를 그대로 유지하고 확장자만 .png 입니다.
+        def to_nobg(path):
+            return str(Path(str(path).replace("/data/raw/", "/data/nobg/")).with_suffix(".png"))
+
+        for frame_ in (train_frame, val_frame):
+            frame_["path"] = frame_["path"].map(to_nobg)
+        missing = sum(not Path(p).exists() for p in train_frame["path"])
+        if missing:
+            print(f"[오류] 배경 제거 사본 {missing}장이 없습니다. run_1_prepare.py 를 "
+                  f"--skip-nobg 없이 먼저 실행하세요.")
+            return 1
 
     if args.train_fraction < 1.0:
         train_frame = train_frame.groupby("label", group_keys=False).sample(
@@ -186,6 +222,9 @@ def main() -> int:
         "best_epoch": best_epoch,
         "best_val_f1": best_score,
         "elapsed_minutes": elapsed / 60,
+        "seed": cfg["seed"],
+        "augment": args.augment,
+        "train_on": args.train_on,
         "train_fraction": args.train_fraction,
         "n_train": len(train_frame),
         "n_val": len(val_frame),

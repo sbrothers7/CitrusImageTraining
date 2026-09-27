@@ -163,9 +163,65 @@ source_B accuracy by origin, one source (100% of A) vs two sources:
 
 ---
 
-### Experiment #3
+### Experiment #3 — three seeds, and two ways to change the outcome
 
-(same template as above)
+**Date**: 2026-09-27
+**Purpose**: Repeat experiment #2 across seeds, since every value there came
+from one seed, and test two interventions that might change cross-source
+performance without collecting more data.
+
+**Settings**: densenet121; seeds 42, 1 and 2, each redrawing the stratified
+split as well as the initialisation; all conditions evaluated on the same
+unchanged source_B (5,871 images).
+
+**Results** (mean ± SD over the three seeds)
+
+| Condition | Train | A test acc | B balanced acc | B MCC |
+|---|---|---|---|---|
+| One source | 294 | 99.5 ± 0.9% | 0.601 ± 0.043 | 0.109 ± 0.036 |
+| Two sources | 521 | 97.3 ± 2.4% | 0.686 ± 0.055 | 0.126 ± 0.032 |
+| Two sources + strong augmentation | 521 | 94.0 ± 3.1% | 0.761 ± 0.072 | 0.216 ± 0.134 |
+| Two sources, trained on background-removed images | 521 | 91.1 ± 8.6% | 0.519 ± 0.090 | 0.020 ± 0.095 |
+
+Per-seed balanced accuracy on source_B:
+
+| Condition | seed 42 | seed 1 | seed 2 |
+|---|---|---|---|
+| One source | 0.556 | 0.607 | 0.641 |
+| Two sources | 0.623 | 0.725 | 0.710 |
+| + strong augmentation | 0.738 | 0.703 | 0.842 |
+| + background-removed training | 0.415 | 0.573 | 0.570 |
+
+**Observations**
+
+- The second source helped in all three seeds (+0.067, +0.118, +0.069), but
+  the mean gain of 0.085 is about the size of the spread within a condition.
+  Direction is consistent; the size is not established by three seeds.
+- Strong augmentation gave the highest scores of any condition and raised
+  Huanglongbing on the PlantVillage origin from 0.285 to 0.516, but it was
+  below the plain two-source condition in one seed of three and cut healthy
+  recall on kaku321 from 0.82 to 0.57.
+- Training on background-removed copies made things worse (0.519, MCC 0.020),
+  below even the single-source condition, and stayed worse when evaluated on
+  background-removed images too (0.563 against 0.665).
+- No condition came close to usable. The best mean MCC is 0.216, with one seed
+  at 0.370 and another at 0.123.
+
+**Interpretation**
+
+- Removing the background at training time takes leaf context away with the
+  shortcut, and the segmentation itself fails on part of the training data, so
+  "the model uses the background" does not imply "remove the background".
+- Augmentation and a second source both act on the same weakness, the narrow
+  range of capture conditions in the training data, and augmentation is far
+  cheaper than collecting another source.
+
+**Next**
+
+- More seeds, if any of these differences are to be quantified rather than
+  ranked.
+- Combine strong augmentation with a third source, since the two cheapest
+  levers have only been tested separately.
 
 ---
 
