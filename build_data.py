@@ -19,6 +19,7 @@ source_B 안에 직접 찍은 사진 폴더(예: source_B/healthy/jeju/)를 만�
   python build_data.py
 """
 
+import argparse
 import hashlib
 import shutil
 import subprocess
@@ -150,10 +151,11 @@ def first_of_each_block(folder):
     return keep
 
 
-def build():
+def build(single_source=False):
     seen = set()  # 이미 넣은 파일의 해시. A와 겹치거나 B 안에서 겹치면 뺍니다.
 
-    print("  source_A (Citrus Leaves + Orange Leaves HLB 2025)")
+    sources = "Citrus Leaves" if single_source else "Citrus Leaves + Orange Leaves HLB 2025"
+    print(f"  source_A ({sources})")
     for c in CLASSES:
         dst = RAW / "source_A" / c
         dst.mkdir(parents=True, exist_ok=True)
@@ -166,10 +168,13 @@ def build():
             seen.add(md5(f))
             n += 1
         # 두 번째 출처. healthy 와 greening 만 있습니다 (canker 없음).
+        # --single-source 면 빼고 만듭니다 (실험 #2 의 '한 출처' 조건 재현용).
         extra = DATASETS / "orange_leaves_hlb_2025" / c
         n_extra = 0
-        if extra.is_dir():
-            sub = dst / "orange_leaves_hlb_2025"
+        sub = dst / "orange_leaves_hlb_2025"
+        if single_source:
+            shutil.rmtree(sub, ignore_errors=True)
+        elif extra.is_dir():
             shutil.rmtree(sub, ignore_errors=True)
             sub.mkdir(parents=True)
             for f in sorted(extra.iterdir()):
@@ -210,10 +215,20 @@ def build():
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--single-source", action="store_true",
+        help="source_A 를 Citrus Leaves 한 출처로만 만듭니다 (2025년 오렌지 잎 세트 제외). "
+             "실험 #2 의 '한 출처' 조건을 다시 돌릴 때 씁니다.",
+    )
+    args = parser.parse_args()
+
     print("=" * 62)
-    print("  데이터 만들기")
+    print("  데이터 만들기" + ("  (source_A = 한 출처)" if args.single_source else ""))
     print("=" * 62)
     for name, fetch in FETCHERS.items():
+        if args.single_source and name == "orange_leaves_hlb_2025":
+            continue
         out = DATASETS / name
         if out.exists():
             print(f"  [있음] {name} — 내려받기 건너뜀")
@@ -224,7 +239,7 @@ def main() -> int:
         fetch(part)
         part.rename(out)
     print()
-    build()
+    build(single_source=args.single_source)
     print()
     print("  완료. 이제 python run_1_prepare.py 를 실행하세요.")
     return 0
