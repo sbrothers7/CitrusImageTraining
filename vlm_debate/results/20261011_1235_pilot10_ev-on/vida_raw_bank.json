@@ -1,0 +1,52 @@
+{
+ "0000_Citrus_Greening_g (155).png": {
+  "moondream:latest": "0.0",
+  "gemma3:4b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf exhibits distinct circular, dark brown to black lesions with concentric rings, which is the classic appearance of black spot disease in citrus. There is also a lighter yellow halo surrounding the lesions, further supporting the diagnosis.\nConfidence: 0.95",
+  "qwen2.5vl:7b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf shows a small, dark spot, which is characteristic of black spot disease in citrus. This disease typically appears as small, dark spots on the leaf surface, often surrounded by a yellowish halo. The presence of this spot strongly suggests the leaf is diseased.\nConfidence: 0.95"
+ },
+ "0001_Citrus_Healthy_52.pn.png": {
+  "moondream:latest": "0.0",
+  "gemma3:4b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf exhibits distinct dark, circular lesions (black spots) along the margins and veins, which is a classic symptom of *Citrus* black spot disease. The lesions appear to be slightly raised and have a dark, sunken center, further supporting this diagnosis.\nConfidence: 0.95",
+  "qwen2.5vl:7b": "Crop Category: Citrus\nDisease Category: Healthy\nDiseased: No\nReasoning: The leaf in the image appears to be a citrus leaf, which is consistent with the shape and coloration. There are no visible signs of disease such as spots, lesions, or discoloration that would indicate the presence of diseases like Black Spot, Canker, or Melanose. The leaf looks healthy with a uniform green color and no visible damage.\nConfidence: 0.95"
+ },
+ "0002_Citrus_Greening_g (150).png": {
+  "moondream:latest": "Confidence: 0.0",
+  "gemma3:4b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf exhibits distinct dark, circular lesions (spots) with a slightly raised, halo-like border, which is characteristic of black spot disease in citrus. The lesions are concentrated along the leaf margins and veins, further supporting the diagnosis.\nConfidence: 0.95",
+  "qwen2.5vl:7b": "Crop Category: Citrus\nDisease Category: Greening\nDiseased: Yes\nReasoning: The leaf shows symptoms of citrus greening, a bacterial disease characterized by yellowing and distortion of the leaf, which is evident in this image. The veins are also discolored, which is another common symptom of citrus greening.\nConfidence: 0.95"
+ },
+ "0003_Citrus_Melanose_SAM_3938Catla.jpg": {
+  "moondream:latest": "0.0",
+  "gemma3:4b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The image clearly shows numerous small, dark, circular spots on the leaves of what appears to be a citrus tree, specifically consistent with the appearance of black spot disease. The spots are concentrated along the leaf veins and edges, a hallmark symptom of this fungal infection.\nConfidence: 0.95",
+  "qwen2.5vl:7b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf shows dark, circular spots with a yellow halo, which are characteristic symptoms of black spot disease in citrus plants. This disease is commonly observed on citrus leaves and can be identified by these distinct lesions.\nConfidence: 0.95"
+ },
+ "0004_Citrus_Black Spot_b (166).png": {
+  "moondream:latest": "0.0",
+  "gemma3:4b": "Crop Category: Citrus\nDisease Category: Melanose\nDiseased: Yes\nReasoning: The leaf exhibits a distinct mottled pattern of dark brown to black discoloration, primarily along the margins and veins, which is characteristic of melanose in citrus. The yellowing areas surrounding the dark spots further support this diagnosis, as melanose often starts with chlorosis (yellowing) before progressing to the dark pigmentation.\nConfidence: 0.95",
+  "qwen2.5vl:7b": "Crop Category: Citrus\nDisease Category: Greening\nDiseased: Yes\nReasoning: The leaf exhibits symptoms of Citrus Greening disease, which is characterized by the presence of chlorotic (yellowish-green) areas on the leaf, which is indicative of the disease. This is a common symptom of Citrus Greening, also known as Huanglongbing (HLB), a bacterial disease.\nConfidence: 0.95"
+ },
+ "0005_Citrus_Healthy_17.pn.png": {
+  "moondream:latest": "0.0",
+  "gemma3:4b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf exhibits distinct dark, circular lesions (black spots) with a lighter halo around the edges, which is a classic symptom of *Cercospora citri* (black spot), a common fungal disease affecting citrus trees. The lesions are concentrated along the leaf margins, further supporting this diagnosis.\nConfidence: 0.95",
+  "qwen2.5vl:7b": "Crop Category: Citrus\nDisease Category: Healthy\nDiseased: No\nReasoning: The leaf appears to be a citrus leaf, which is typically oval-shaped with a smooth margin. There are no visible symptoms of disease such as spots, lesions, or discoloration that would indicate the presence of diseases like Black Spot, Canker, or Melanose. The leaf looks clean and healthy.\nConfidence: 0.95"
+ },
+ "0006_Citrus_Black Spot_b (95).png": {
+  "moondream:latest": "0.0",
+  "gemma3:4b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf exhibits distinct circular lesions with a dark, necrotic center, which is characteristic of black spot disease in citrus. The lesions are surrounded by a pale halo, further supporting this diagnosis. The overall appearance of the leaf strongly suggests the presence of this fungal disease.\nConfidence: 0.95",
+  "qwen2.5vl:7b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf shows brown spots with a dark margin, which is characteristic of Black Spot disease in citrus plants. This disease typically appears as small, circular, and sunken lesions on the leaf surface, which matches the visual evidence in the image.\nConfidence: 0.95"
+ },
+ "0007_Citrus_Melanose_146.jpg": {
+  "moondream:latest": "Confidence: 0.0",
+  "gemma3:4b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The image clearly shows numerous small, black, wax-covered insects clustered on the leaf surface, particularly along the veins. This is the characteristic appearance of *Cryptococcus leaf spot*, commonly known as black spot, a fungal disease prevalent in citrus. The insects are feeding on the leaf tissue, creating the visible lesions.\nConfidence: 0.95",
+  "qwen2.5vl:7b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf shows numerous small, dark spots scattered across the surface, which is characteristic of citrus black spot disease. This disease typically appears as small, dark spots on the leaves, stems, and fruit of citrus plants.\nConfidence: 0.95"
+ },
+ "0008_Citrus_Canker_162.p.png": {
+  "moondream:latest": "Confidence: 0.0",
+  "gemma3:4b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf exhibits distinct circular lesions with a reddish-brown halo, which is the classic appearance of *Black Spot* (caused by *Cercospora citri*) in citrus. The lesions are concentrated along the leaf veins and margins, further supporting this diagnosis.\nConfidence: 0.95",
+  "qwen2.5vl:7b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf shows small, circular, brown spots with yellow halos, which are characteristic symptoms of citrus black spot disease. This disease is commonly found on citrus leaves and fruits.\nConfidence: 0.95"
+ },
+ "0009_Citrus_Canker_104.p.png": {
+  "moondream:latest": "0.0",
+  "gemma3:4b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf exhibits distinct circular spots with a dark reddish-brown center and a lighter halo, which is the classic appearance of *Black Spot* (caused by *Cercospora citri*) in citrus. The lesions are concentrated along the leaf margins, further supporting this diagnosis.\nConfidence: 0.95",
+  "qwen2.5vl:7b": "Crop Category: Citrus\nDisease Category: Black Spot\nDiseased: Yes\nReasoning: The leaf shows small, circular, brown spots with a yellow halo, which are characteristic of black spot disease in citrus plants. This disease typically appears as brown lesions on the leaf surface.\nConfidence: 0.95"
+ }
+}

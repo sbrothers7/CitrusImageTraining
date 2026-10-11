@@ -1,0 +1,20 @@
+{
+ "dataset_root": "/home/sbrothers7/Documents/Coding/CitrusImageTraining/vlm_debate/data/citrusA_mendeley_4cls.json",
+ "output_dir": "/home/sbrothers7/Documents/Coding/CitrusImageTraining/vlm_debate/results/20261011_1429_main200_citrusA_ev-off",
+ "n_images": 200,
+ "n_debate": 3,
+ "seed": 42,
+ "softmax_temp": 2.0,
+ "mock": false,
+ "use_judge": false,
+ "require_new_evidence": false,
+ "agents": [
+  "moondream:latest",
+  "gemma3:4b",
+  "qwen2.5vl:7b"
+ ],
+ "debate_agents": null,
+ "vida_cache": "/home/sbrothers7/Documents/Coding/CitrusImageTraining/vlm_debate/results/20261011_1354_main200_citrusA_ev-on/vida_raw_bank.json",
+ "enforce_evidence": false,
+ "started": "2026-10-11 14:29:11"
+}

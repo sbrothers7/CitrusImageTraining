@@ -1,57 +1,20 @@
 {
  "crop": "Citrus",
- "source": "Zenodo 8294078 CitrusUAT (C. sinensis), Images resized to 768px",
+ "source": "Zenodo 8294078 CitrusUAT (C. sinensis)",
  "counts": {
-  "Leaf Miner": 100,
-  "Iron Deficiency": 100,
-  "Greasy Spot": 100,
-  "Healthy": 100,
-  "Greening": 43,
-  "Magnesium Deficiency": 100,
-  "Manganese Deficiency": 30,
-  "Nitrogen Deficiency": 50,
-  "Red Scale": 30,
-  "Red Scale Sequelae": 100,
-  "Texas Mite": 100,
-  "Zinc Deficiency": 100
+  "Images": 953,
+  "Masks": 953,
+  "Rois": 953
  },
  "classes": {
-  "Greasy Spot": [
-   "zenodo_768/Greasy Spot"
+  "Images": [
+   "zenodo_8294078/CitrusUAT_dataset/CitrusUAT_dataset/Images"
   ],
-  "Greening": [
-   "zenodo_768/Greening"
+  "Masks": [
+   "zenodo_8294078/CitrusUAT_dataset/CitrusUAT_dataset/Masks"
   ],
-  "Healthy": [
-   "zenodo_768/Healthy"
-  ],
-  "Iron Deficiency": [
-   "zenodo_768/Iron Deficiency"
-  ],
-  "Leaf Miner": [
-   "zenodo_768/Leaf Miner"
-  ],
-  "Magnesium Deficiency": [
-   "zenodo_768/Magnesium Deficiency"
-  ],
-  "Manganese Deficiency": [
-   "zenodo_768/Manganese Deficiency"
-  ],
-  "Nitrogen Deficiency": [
-   "zenodo_768/Nitrogen Deficiency"
-  ],
-  "Red Scale": [
-   "zenodo_768/Red Scale"
-  ],
-  "Red Scale Sequelae": [
-   "zenodo_768/Red Scale Sequelae"
-  ],
-  "Texas Mite": [
-   "zenodo_768/Texas Mite"
-  ],
-  "Zinc Deficiency": [
-   "zenodo_768/Zinc Deficiency"
+  "Rois": [
+   "zenodo_8294078/CitrusUAT_dataset/CitrusUAT_dataset/ROIs"
   ]
- },
- "paths_relative_to": "CITRUS_DATA (default: ~/citrus-data on macOS/Linux, C:/citrus-data on Windows)"
+ }
 }

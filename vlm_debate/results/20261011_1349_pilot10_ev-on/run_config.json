@@ -1,0 +1,20 @@
+{
+ "dataset_root": "/home/sbrothers7/Documents/Coding/CitrusImageTraining/vlm_debate/data/citrusB_mendeley.json",
+ "output_dir": "/home/sbrothers7/Documents/Coding/CitrusImageTraining/vlm_debate/results/20261011_1349_pilot10_ev-on",
+ "n_images": 10,
+ "n_debate": 3,
+ "seed": 42,
+ "softmax_temp": 2.0,
+ "mock": false,
+ "use_judge": false,
+ "require_new_evidence": true,
+ "agents": [
+  "moondream:latest",
+  "gemma3:4b",
+  "qwen2.5vl:7b"
+ ],
+ "debate_agents": null,
+ "vida_cache": null,
+ "enforce_evidence": false,
+ "started": "2026-10-11 13:49:38"
+}

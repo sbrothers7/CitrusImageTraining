@@ -1,0 +1,40 @@
+{
+ "n_images": 190,
+ "agents": [
+  "moondream:latest",
+  "gemma3:4b",
+  "qwen2.5vl:7b"
+ ],
+ "debate_agents": [
+  "qwen2.5vl:7b",
+  "gemma3:4b",
+  "moondream:latest"
+ ],
+ "weights": {
+  "qwen2.5vl:7b": 0.3584779992050211,
+  "gemma3:4b": 0.3401433985491224,
+  "moondream:latest": 0.3013786022458565
+ },
+ "baseline_both": 0.347,
+ "consensus_both": 0.3,
+ "delta": -0.047,
+ "baseline_crop": 1.0,
+ "consensus_crop": 1.0,
+ "baseline_disease": 0.347,
+ "consensus_disease": 0.3,
+ "influence": {
+  "gemma3:4b→qwen2.5vl:7b": 156,
+  "qwen2.5vl:7b→gemma3:4b": 306,
+  "moondream:latest→gemma3:4b": 17,
+  "qwen2.5vl:7b→qwen2.5vl:7b": 25
+ },
+ "stubborn_pct": {
+  "qwen2.5vl:7b": 94.2,
+  "gemma3:4b": 56.8,
+  "moondream:latest": 100.0
+ },
+ "mock": false,
+ "require_new_evidence": true,
+ "enforce_evidence": true,
+ "reverted_changes": 83
+}

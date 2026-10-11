@@ -1,0 +1,4 @@
+﻿agent,n,crop_acc,disease_acc,combined_acc,parse_fail_pct,mean_confidence,reasoning_quality,plausibility
+qwen2.5vl:7b,190,1.0,0.347,0.347,0.0,0.944,,
+gemma3:4b,190,1.0,0.242,0.242,0.0,0.94,,
+moondream:latest,190,0.0,0.0,0.0,100.0,0.0,,

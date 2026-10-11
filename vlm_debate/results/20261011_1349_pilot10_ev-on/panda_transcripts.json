@@ -1,0 +1,812 @@
+{
+ "0000_Citrus_Greening_g (155).png": {
+  "image_path": "/home/sbrothers7/citrus-data/mendeley_3f83gxmv57_v2/x/A Citrus Fruits and Leaves Dataset for Detection and Classification of Citrus Diseases through Machine Learning/Citrus Plant Dataset/Citrus/Citrus/Leaves/greening/g (155).png",
+  "file_name": "g (155).png",
+  "gt": "Citrus / Greening",
+  "consensus": "Citrus / Black Spot",
+  "baseline": "Citrus / Black Spot",
+  "rounds": {
+   "qwen2.5vl:7b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf shows a small, dark spot, which is characteristic of black spot disease in citrus. This disease typically appears as small, dark spots on the leaf surface. The presence of this spot strongly suggests the leaf is diseased.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of Black Spot disease in citrus. The leaf shows a small, dark spot with a reddish-brown center, which is characteristic of black spot disease. The presence of this spot, along with the surrounding yellow halo, is consistent with the classic appearance of black spot lesions. Moondream:latest's assessment of \"None\" is incorrect as there is clear evidence of a disease present on the leaf.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "The distinct circular lesion with a dark, reddish-brown center and a lighter yellow halo is the new visual evidence that supports the identification of black spot disease."
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of Black Spot disease in citrus. The leaf shows a small, dark spot with a reddish-brown center, which is characteristic of black spot disease. The presence of t",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "gemma3:4b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf exhibits distinct circular lesions with a dark, reddish-brown center, surrounded by a lighter yellow halo – this is the classic appearance of black spot disease in citrus. The lesions are irregular in shape and scattered across the leaf surface, strongly indicative of this fungal infection.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with qwen2.5vl:7b’s assessment of Citrus / Black Spot. The image clearly displays the characteristic symptoms of black spot disease – circular lesions with a dark, reddish-brown center and a lighter yellow halo. While moondream:latest provided “None / None,” their assessment missed the key visual indicators present in the image. The lesions are not simply small dark spots; they exhibit the defined concentric rings indicative of black spot development.",
+     "confidence": 0.95,
+     "influenced_by": "moondream:latest",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with qwen2.5vl:7b and moondream:latest’s assessment of Black Spot disease in citrus. The image clearly displays the characteristic symptoms of black spot disease – circular lesions with a dark, reddish-brown center and a lighter halo, as seen in this leaf.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "moondream:latest": {
+    "r1": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    }
+   }
+  }
+ },
+ "0001_Citrus_Healthy_52.pn.png": {
+  "image_path": "/home/sbrothers7/citrus-data/mendeley_3f83gxmv57_v2/x/A Citrus Fruits and Leaves Dataset for Detection and Classification of Citrus Diseases through Machine Learning/Citrus Plant Dataset/Citrus/Citrus/Leaves/healthy/52.pn.png",
+  "file_name": "52.pn.png",
+  "gt": "Citrus / Healthy",
+  "consensus": "Citrus / Black Spot",
+  "baseline": "Citrus / Healthy",
+  "rounds": {
+   "qwen2.5vl:7b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Healthy",
+     "reasoning": "The leaf appears to be a citrus leaf, characterized by its oval shape and smooth edges. There are no visible signs of disease such as spots, lesions, or discoloration that would indicate the presence of diseases like Black Spot, Canker, or Melanose. The leaf looks healthy with a uniform green color and no visible symptoms of disease.",
+     "confidence": 0.9
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Healthy",
+     "reasoning": "I agree with gemma3:4b that the leaf exhibits distinct dark, circular lesions with a lighter center, which is a classic symptom of black spot disease in citrus. However, upon re-examination, the leaf does not show these dark spots. The leaf appears to be a healthy citrus leaf with a smooth, oval shape and no visible signs of disease. The reasoning provided by moondream:latest does not provide any evidence to change the initial assessment.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "After re-examining the leaf, there are no visible dark, circular lesions with a lighter center that would indicate black spot disease. The leaf appears healthy with a uniform green color and no signs of disease. The reasoning provided by moondream:latest aligns with this observation.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "gemma3:4b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf exhibits distinct dark, circular lesions (spots) with a lighter center, which is a classic symptom of black spot disease in citrus. The spots are irregular in shape and size, and the leaf’s overall coloration appears affected, further supporting the diagnosis.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I initially identified Black Spot based on the dark, circular lesions with lighter centers, as stated in my Round 1 verdict. However, upon reviewing the peer assessments, I agree with qwen2.5vl:7b that the leaf appears to be a citrus leaf and doesn’t show obvious signs of disease. However, the presence of the distinct, irregular dark spots with lighter centers remains a key visual feature. Moondream’s assessment of “None / None” is incorrect; the image clearly displays lesions, supporting my initial diagnosis of Black Spot.",
+     "confidence": 0.85,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I disagree with qwen2.5vl:7b and moondream:latest. The leaf clearly exhibits distinct dark, circular lesions with a lighter center, which is a hallmark symptom of black spot disease. While qwen2.5vl:7b initially identified it correctly, moondream:latest incorrectly stated “None / None.” I have carefully reviewed the image and maintain my assessment.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "moondream:latest": {
+    "r1": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    }
+   }
+  }
+ },
+ "0002_Citrus_Greening_g (150).png": {
+  "image_path": "/home/sbrothers7/citrus-data/mendeley_3f83gxmv57_v2/x/A Citrus Fruits and Leaves Dataset for Detection and Classification of Citrus Diseases through Machine Learning/Citrus Plant Dataset/Citrus/Citrus/Leaves/greening/g (150).png",
+  "file_name": "g (150).png",
+  "gt": "Citrus / Greening",
+  "consensus": "Citrus / Greening",
+  "baseline": "Citrus / Greening",
+  "rounds": {
+   "qwen2.5vl:7b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Greening",
+     "reasoning": "The leaf exhibits symptoms of citrus Greening disease, characterized by yellowing and distortion of the leaf, which is a common sign of this disease. The presence of these symptoms suggests that the leaf is affected by the disease.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Greening",
+     "reasoning": "I agree with gemma3:4b's identification of the disease as Citrus Greening. The leaf exhibits the characteristic yellowing and distortion, which are common symptoms of this disease. However, I disagree with moondream:latest's assessment of \"None\" as the leaf clearly shows signs of disease. The reasoning provided by gemma3:4b aligns with the visual evidence present in the image.",
+     "confidence": null,
+     "influenced_by": "gemma3:4b",
+     "new_visual_evidence": "The distinct yellowing and distortion of the leaf, which are characteristic of Citrus Greening disease."
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Greening",
+     "reasoning": "I agree with qwen2.5vl:7b's identification of the disease as Citrus Greening. The leaf exhibits the characteristic yellowing and distortion, which are common symptoms of this disease. The reasoning provided by qwen2.5vl:7b is valid and aligns with the visual evidence observed.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "gemma3:4b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf exhibits distinct circular lesions with a dark, necrotic center, which is the classic appearance of black spot disease in citrus. The lesions are surrounded by a yellow halo, further supporting the diagnosis. The overall coloration of the leaf is also indicative of the disease’s impact.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I initially identified Black Spot, and my reasoning remains valid. However, I must address the conflicting assessments. qwen2.5vl:7b correctly identified Citrus, but incorrectly diagnosed Greening. The key visual feature differentiating Black Spot from Greening is the distinct circular lesion with a dark, necrotic center – this is clearly visible in the image. The yellow halo surrounding the lesion is also characteristic of Black Spot. Moondream:latest offered no assessment, which I agree with. My confidence in this diagnosis remains high.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Greening",
+     "reasoning": "I agree with qwen2.5vl:7b’s assessment of Citrus Greening. The leaf exhibits the characteristic yellowing and distortion, which are indicative of this disease. While I initially leaned towards Black Spot, the visual evidence now strongly supports Greening. I disagree with moondream:latest’s assessment of “None / None”.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "The pronounced yellowing and leaf distortion are key indicators of Greening."
+    }
+   },
+   "moondream:latest": {
+    "r1": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    }
+   }
+  }
+ },
+ "0003_Citrus_Melanose_SAM_3938Catla.jpg": {
+  "image_path": "/home/sbrothers7/citrus-data/mendeley_3f83gxmv57_v2/x/A Citrus Fruits and Leaves Dataset for Detection and Classification of Citrus Diseases through Machine Learning/Citrus Plant Dataset/Citrus/Citrus/Leaves/Melanose/SAM_3938Catla.jpg",
+  "file_name": "SAM_3938Catla.jpg",
+  "gt": "Citrus / Melanose",
+  "consensus": "Citrus / Black Spot",
+  "baseline": "Citrus / Black Spot",
+  "rounds": {
+   "qwen2.5vl:7b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf shows dark, circular spots with a reddish-brown margin, which are characteristic of citrus black spot disease. This disease is commonly found on citrus leaves and fruit, causing significant damage to the crop.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of the disease as citrus black spot. The leaf shows numerous small, dark, circular spots with a reddish-brown margin, which are characteristic symptoms of this disease. The spots are scattered across the leaf surface, which is typical for citrus black spot. There is no evidence of canker, greening, or other diseases in the image. The leaf also shows signs of damage, which is consistent with the symptoms of citrus black spot.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of the disease as citrus black spot. The leaf shows numerous small, dark, circular spots with a reddish-brown margin, which are characteristic symptoms of this disease. The presence of these symptoms is consistent with the visual evidence provided.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "gemma3:4b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The image clearly shows numerous small, dark, circular spots on the leaves of the citrus plant, which is the characteristic symptom of black spot disease. The spots are concentrated along the leaf veins and edges, consistent with the appearance of this fungal infection.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with qwen2.5vl:7b’s identification of Black Spot. The image clearly exhibits numerous small, dark, circular spots with a slightly reddish-brown margin, precisely matching the characteristic symptom of this fungal disease on citrus leaves. While moondream:latest provided “None / None,” my initial assessment and subsequent re-examination confirm the presence of black spot. The density and arrangement of the spots, as well as the slight discoloration around the edges, strongly support this diagnosis.",
+     "confidence": 0.95,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with qwen2.5vl:7b and moondream:latest’s identification of Black Spot. The image clearly exhibits numerous small, dark, circular spots with a slightly reddish-brown margin, precisely matching the characteristic symptoms of Black Spot on citrus leaves.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "moondream:latest": {
+    "r1": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    }
+   }
+  }
+ },
+ "0004_Citrus_Black Spot_b (166).png": {
+  "image_path": "/home/sbrothers7/citrus-data/mendeley_3f83gxmv57_v2/x/A Citrus Fruits and Leaves Dataset for Detection and Classification of Citrus Diseases through Machine Learning/Citrus Plant Dataset/Citrus/Citrus/Leaves/Black spot/b (166).png",
+  "file_name": "b (166).png",
+  "gt": "Citrus / Black Spot",
+  "consensus": "Citrus / Melanose",
+  "baseline": "Citrus / Greening",
+  "rounds": {
+   "qwen2.5vl:7b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Greening",
+     "reasoning": "The leaf exhibits symptoms of Citrus Greening disease, which is characterized by the presence of chlorotic (yellowish-green) areas on the leaf, which is indicative of the disease. The leaf also shows signs of necrosis (brownish discoloration) at the tip, which is another symptom of Citrus Greening. Confidence: 0.9",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Melanose",
+     "reasoning": "I agree with gemma3:4b's assessment of Melanose. The leaf exhibits distinct dark brown to black discoloration along the margins and veins, which is characteristic of Melanose in citrus. The chlorotic areas are not prominent in this image, and the dark discoloration is more indicative of Melanose than Citrus Greening disease. Moondream:latest's assessment of \"None\" is not applicable since the leaf clearly shows signs of a disease.",
+     "confidence": 0.9,
+     "influenced_by": "gemma3:4b",
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Melanose",
+     "reasoning": "I agree with gemma3:4b's assessment of Melanose. The leaf exhibits distinct dark brown to black discoloration along the margins and veins, which is characteristic of Melanose in citrus. The chlorotic appearance and the pattern of discoloration are consistent with this diagnosis. I do not agree with the initial assessment of \"Greening\" as there is no evidence of the symptoms associated with Citrus Greening disease, such as leaf distortion or chlorotic mottling.",
+     "confidence": 1.0,
+     "influenced_by": "gemma3:4b",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "gemma3:4b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Melanose",
+     "reasoning": "The leaf exhibits a distinct dark brown to black discoloration, primarily along the margins and veins, which is characteristic of Melanose in citrus. The yellowing areas adjacent to the dark spots further support this diagnosis, as Melanose often begins with chlorosis (yellowing) before progressing to the dark coloration.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Melanose",
+     "reasoning": "I agree with the initial assessment of Citrus / Melanose. However, I disagree with qwen2.5vl:7b’s identification of “Greening.” While there is some yellowing present, the dominant feature is the dark brown to black discoloration, specifically along the leaf margins and veins, which is the defining characteristic of Melanose in citrus. The yellowing is secondary to this dark browning. Moondream’s assessment of “None / None” is incorrect as the leaf clearly exhibits disease symptoms.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Melanose",
+     "reasoning": "I agree with qwen2.5vl:7b and moondream:latest that this is Melanose. The leaf exhibits distinct dark brown to black discoloration along the margins and veins, which is characteristic of Melanose. I disagree with moondream:latest’s “None / None” assessment.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "moondream:latest": {
+    "r1": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    }
+   }
+  }
+ },
+ "0005_Citrus_Healthy_17.pn.png": {
+  "image_path": "/home/sbrothers7/citrus-data/mendeley_3f83gxmv57_v2/x/A Citrus Fruits and Leaves Dataset for Detection and Classification of Citrus Diseases through Machine Learning/Citrus Plant Dataset/Citrus/Citrus/Leaves/healthy/17.pn.png",
+  "file_name": "17.pn.png",
+  "gt": "Citrus / Healthy",
+  "consensus": "Citrus / Healthy",
+  "baseline": "Citrus / Healthy",
+  "rounds": {
+   "qwen2.5vl:7b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Healthy",
+     "reasoning": "The leaf appears to be a citrus leaf, and there are no visible signs of disease such as spots, lesions, or discoloration that would indicate the presence of diseases like Black Spot, Canker, or Melanose. The leaf looks healthy with a uniform green color and no visible damage.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Healthy",
+     "reasoning": "I agree with gemma3:4b's assessment that the leaf appears to be a healthy citrus leaf. The leaf has a smooth, vibrant green color and a distinct vein pattern. There are no visible signs of lesions, spots, or discoloration that would indicate the presence of diseases such as Black Spot, Canker, or Melanose. The leaf's appearance is consistent with a healthy citrus leaf.",
+     "confidence": null,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Healthy",
+     "reasoning": "I agree with gemma3:4b's assessment that this is a healthy citrus leaf. The leaf has a smooth, vibrant green color with a clear central vein, and there are no visible signs of lesions, spots, or other diseases. The leaf's appearance is consistent with a healthy citrus leaf, and there are no new visual features that suggest otherwise. I am confident in this assessment as it aligns with the reasoning provided by gemma3:4b.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "gemma3:4b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Healthy",
+     "reasoning": "The leaf appears to be a healthy citrus leaf with a smooth, vibrant green color and a distinct vein pattern. There are no visible signs of lesions, spots, or discoloration, which are characteristic of citrus diseases.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Healthy",
+     "reasoning": "I agree with qwen2.5vl:7b that this is a citrus leaf. The leaf exhibits a vibrant, healthy green color with a clear central vein, and there are no visible signs of disease such as black spot, canker, greening, or melanose. While there is a small yellow spot near the edge, this appears to be a natural variation in pigmentation and not a symptom of disease. Moondream’s “None / None” assessment is correct; the leaf appears healthy.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Healthy",
+     "reasoning": "I agree with qwen2.5vl:7b and moondream:latest that this is a healthy citrus leaf. The leaf exhibits a vibrant, healthy green color with a clear central vein, and there are no visible signs of disease.",
+     "confidence": 0.95,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "moondream:latest": {
+    "r1": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    }
+   }
+  }
+ },
+ "0006_Citrus_Black Spot_b (95).png": {
+  "image_path": "/home/sbrothers7/citrus-data/mendeley_3f83gxmv57_v2/x/A Citrus Fruits and Leaves Dataset for Detection and Classification of Citrus Diseases through Machine Learning/Citrus Plant Dataset/Citrus/Citrus/Leaves/Black spot/b (95).png",
+  "file_name": "b (95).png",
+  "gt": "Citrus / Black Spot",
+  "consensus": "Citrus / Black Spot",
+  "baseline": "Citrus / Greening",
+  "rounds": {
+   "qwen2.5vl:7b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Greening",
+     "reasoning": "The leaf exhibits symptoms of Citrus Greening disease, characterized by the presence of chlorotic (yellowish) areas on the leaf, which is a common symptom of this disease. The leaf also appears to have a distorted shape, which is another typical sign of Citrus Greening. The disease is caused by a bacterium and can be identified by these specific visual symptoms.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Greening",
+     "reasoning": "I agree with gemma3:4b's identification of Citrus and Black Spot. The leaf exhibits distinct circular lesions with a dark, necrotic center, which is characteristic of black spot disease in citrus. The presence of chlorotic (yellowish) areas on the leaf is also a common symptom of Citrus Greening disease. The leaf appears to have both black spot lesions and chlorotic areas, which supports the diagnosis of Citrus Greening disease. I disagree with moondream:latest's \"None / None\" verdict. The leaf clearly shows symptoms of Citrus Greening disease, which includes chlorotic areas and black spot lesions. These visual features are not present in a healthy leaf.",
+     "confidence": null,
+     "influenced_by": "gemma3:4b",
+     "new_visual_evidence": "The leaf exhibits both chlorotic areas and black spot lesions, which are characteristic of Citrus Greening disease."
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of Citrus and Black Spot. The leaf exhibits distinct circular lesions with a dark, necrotic center, which is characteristic of black spot disease in citrus. The peer assessment by moondream:latest does not provide any evidence or reasoning, so I will not change my verdict based on their position.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "gemma3:4b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf exhibits distinct circular lesions with a dark, necrotic center, which is characteristic of black spot disease in citrus. The lesions are surrounded by a pale halo, further supporting the diagnosis. The overall appearance of the leaf strongly suggests the presence of this fungal infection.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I initially identified Black Spot, and I stand by that assessment. However, I’ve reviewed the peer assessments. qwen2.5vl:7b correctly identified Citrus Greening, pointing out the chlorotic areas. While the leaf does show some yellowing, the primary diagnostic feature remains the distinct, dark, necrotic lesions with a pale halo – the hallmark of Black Spot. The lesions are more circular and defined than the irregular, blotchy symptoms typically associated with Greening.  moondream:latest offered no assessment, so their opinion is disregarded.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Greening",
+     "reasoning": "I agree with qwen2.5vl:7b that this leaf exhibits characteristics of Citrus Greening. The prominent chlorotic areas and the overall appearance of the leaf strongly suggest this disease. I disagree with my previous assessment of Black Spot and also with moondream:latest’s “None / None” assessment.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "The leaf shows significant chlorosis and a mottled appearance, indicative of Greening."
+    }
+   },
+   "moondream:latest": {
+    "r1": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    }
+   }
+  }
+ },
+ "0007_Citrus_Melanose_146.jpg": {
+  "image_path": "/home/sbrothers7/citrus-data/mendeley_3f83gxmv57_v2/x/A Citrus Fruits and Leaves Dataset for Detection and Classification of Citrus Diseases through Machine Learning/Citrus Plant Dataset/Citrus/Citrus/Leaves/Melanose/146.jpg",
+  "file_name": "146.jpg",
+  "gt": "Citrus / Melanose",
+  "consensus": "Citrus / Black Spot",
+  "baseline": "Citrus / Black Spot",
+  "rounds": {
+   "qwen2.5vl:7b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf shows numerous small, dark spots scattered across its surface, which is characteristic of citrus black spot disease. This disease is commonly found on citrus leaves and fruits, causing these distinctive lesions.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of citrus black spot. The image shows numerous small, dark spots scattered across the leaf surface, which is characteristic of citrus black spot disease. These spots are typically found along the veins and margins of the leaf, as described by gemma3:4b. The presence of these spots, along with the clustering along the leaf veins and margins, supports the diagnosis of citrus black spot. I disagree with moondream:latest's \"None / None\" assessment. The visual evidence clearly indicates the presence of citrus black spot disease, as described above.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "The clustering of dark spots along the leaf veins and margins is a key feature that supports the diagnosis of citrus black spot disease."
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of Citrus / Black Spot. The image shows numerous small, dark spots scattered across the leaf surface, which is characteristic of citrus black spot disease. These spots are consistent with the symptoms described in the reasoning provided by gemma3:4b. There is no new visual evidence that contradicts this identification.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": null
+    }
+   },
+   "gemma3:4b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The image clearly shows numerous small, black, conidia-producing masses clustered along the leaf veins and margins of the citrus leaf. This characteristic appearance of conidia is the defining feature of black spot disease in citrus, a common fungal infection. The density and distribution of these black spots strongly indicate the presence of this disease.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with qwen2.5vl:7b’s identification of Citrus / Black Spot. The image unequivocally shows numerous small, black, conidia-producing masses clustered along the leaf veins and margins, which is the defining characteristic of Citrus black spot.  moondream:latest provided no assessment, so I maintain my initial diagnosis. There is no evidence of canker, greening, melanose, or a healthy state.",
+     "confidence": 0.95,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with qwen2.5vl:7b and moondream:latest’s identification of citrus black spot. The image unequivocally shows numerous small, black, conidia-producing masses clustered along the leaf veins and margins, which is characteristic of black spot.",
+     "confidence": 1.0,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "moondream:latest": {
+    "r1": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    }
+   }
+  }
+ },
+ "0008_Citrus_Canker_162.p.png": {
+  "image_path": "/home/sbrothers7/citrus-data/mendeley_3f83gxmv57_v2/x/A Citrus Fruits and Leaves Dataset for Detection and Classification of Citrus Diseases through Machine Learning/Citrus Plant Dataset/Citrus/Citrus/Leaves/canker/162.p.png",
+  "file_name": "162.p.png",
+  "gt": "Citrus / Canker",
+  "consensus": "Citrus / Black Spot",
+  "baseline": "Citrus / Black Spot",
+  "rounds": {
+   "qwen2.5vl:7b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf shows dark, circular spots with yellow halos, which are characteristic symptoms of citrus black spot disease. This disease is commonly found on citrus leaves and fruits.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of Citrus Black Spot. The leaf shows distinct circular lesions with a reddish-brown halo, which is characteristic of Black Spot disease caused by Alternaria citri. The yellow halo around the lesions is also a key feature of this disease. Moondream:latest's assessment of \"None\" is incorrect as the leaf clearly displays symptoms of Black Spot.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "The presence of the yellow halo around the lesions is a key feature that distinguishes Black Spot from other diseases and is consistent with the description provided by gemma3:4b."
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of Citrus Black Spot. The leaf shows distinct circular lesions with a reddish-brown halo, which is characteristic of Black Spot disease caused by Alternaria citri. The presence of these lesions on the leaf is clear evidence of the disease. Moondream:latest's suggestion of \"None / None\" does not align with the visual evidence presented.",
+     "confidence": 1.0,
+     "influenced_by": "gemma3:4b",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "gemma3:4b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf exhibits distinct circular lesions with a reddish-brown halo, which is the classic appearance of Black Spot (caused by Alternaria citri) in citrus. The lesions are concentrated along the leaf margins and veins, further supporting this diagnosis.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with qwen2.5vl:7b’s assessment of Citrus / Black Spot. The image clearly shows circular lesions with a reddish-brown halo, which is the hallmark symptom of Black Spot (caused by Alternaria citri) in citrus. The lesions are concentrated along the leaf midrib, as seen in the peer assessment. Moondream’s “None / None” assessment is incorrect; the visual evidence is undeniable.",
+     "confidence": 0.95,
+     "influenced_by": "qwen2.5vl:7b",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with qwen2.5vl:7b and moondream:latest’s assessment of Citrus / Black Spot. The image clearly shows circular lesions with a reddish-brown halo, which is the hallmark symptom of Black Spot (caused by Alternaria citrophila). There is no evidence of other diseases.",
+     "confidence": 0.95,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "moondream:latest": {
+    "r1": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    }
+   }
+  }
+ },
+ "0009_Citrus_Canker_104.p.png": {
+  "image_path": "/home/sbrothers7/citrus-data/mendeley_3f83gxmv57_v2/x/A Citrus Fruits and Leaves Dataset for Detection and Classification of Citrus Diseases through Machine Learning/Citrus Plant Dataset/Citrus/Citrus/Leaves/canker/104.p.png",
+  "file_name": "104.p.png",
+  "gt": "Citrus / Canker",
+  "consensus": "Citrus / Black Spot",
+  "baseline": "Citrus / Black Spot",
+  "rounds": {
+   "qwen2.5vl:7b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf shows small, circular, brown spots with a yellow halo, which are characteristic of citrus black spot disease. This disease is commonly found on citrus leaves and fruits and is caused by the fungus Guignardia citricarpa.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of citrus black spot. The leaf shows small, circular, brown spots with a yellow halo, which are characteristic of this disease. The spots have a dark reddish-brown center, surrounded by a lighter halo, which is also consistent with the description of citrus black spot. The leaf does not show the symptoms of canker, greening, or melanose. Therefore, I agree with gemma3:4b's assessment.",
+     "confidence": 0.9,
+     "influenced_by": "gemma3:4b",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with gemma3:4b's identification of Citrus / Black Spot. The leaf shows small, circular, brown spots with a yellow halo, which are characteristic of this disease. The spots have a dark reddish-brown margin, which is typical of citrus black spot. There is no evidence of canker, greening, or melanose in the image. The reasoning provided by moondream:latest does not support a different diagnosis, as the visual evidence clearly matches the symptoms of black spot.",
+     "confidence": 1.0,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "gemma3:4b": {
+    "r1": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "The leaf exhibits numerous small, circular spots with a dark reddish-brown center, surrounded by a lighter halo – this is the classic appearance of Black Spot disease in citrus. The lesions are concentrated primarily on the upper surface of the leaf, further supporting the diagnosis.",
+     "confidence": 0.95
+    },
+    "r2": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with qwen2.5vl:7b’s assessment of Citrus / Black Spot. The image clearly displays the characteristic symptoms of Black Spot disease: numerous small, circular spots with a dark reddish-brown center and a lighter yellow halo, as seen in the leaf. Moondream:latest provided no assessment, so I maintain my initial diagnosis.",
+     "confidence": 0.95,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    },
+    "r3": {
+     "crop_category": "Citrus",
+     "disease_category": "Black Spot",
+     "reasoning": "I agree with qwen2.5vl:7b and moondream:latest’s assessment of Citrus / Black Spot. The image clearly displays the characteristic symptoms of Black Spot disease: numerous small, circular spots with a dark reddish-brown center and a yellow halo, as seen on the leaf.",
+     "confidence": 0.95,
+     "influenced_by": "None",
+     "new_visual_evidence": "NONE"
+    }
+   },
+   "moondream:latest": {
+    "r1": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": null
+    },
+    "r2": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    },
+    "r3": {
+     "crop_category": null,
+     "disease_category": null,
+     "reasoning": "",
+     "confidence": 0.0,
+     "influenced_by": null,
+     "new_visual_evidence": null
+    }
+   }
+  }
+ }
+}

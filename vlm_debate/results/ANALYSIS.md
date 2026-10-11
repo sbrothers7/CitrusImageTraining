@@ -1,4 +1,4 @@
-# Analysis — 2026-09-24 22:11
+# Analysis — 2026-10-11 17:42
 
 ## 1. Debate effect per run (R1 weighted vote -> R3 weighted vote)
 
@@ -8,12 +8,19 @@
 | 20260924_0018_main200_citrusA_ev-off | OFF (no rule) | 190 | 0.368 | 0.384 | +0.016 | 5 | 2 | 0.453 |
 | 20260924_1014_main200_citrusA_ev-hard | HARD (code-enforced) | 190 | 0.368 | 0.368 | +0.000 | 2 | 2 | 1.000 |
 | 20260924_1638_main180_zenodo_ev-on | ON (prompt rule) | 180 | 0.189 | 0.206 | +0.017 | 7 | 4 | 0.549 |
+| 20261011_1354_main200_citrusA_ev-on | ON (prompt rule) | 190 | 0.347 | 0.237 | -0.111 | 16 | 37 | 0.005 |
+| 20261011_1429_main200_citrusA_ev-off | OFF (no rule) | 190 | 0.347 | 0.211 | -0.137 | 17 | 43 | 0.001 |
+| 20261011_1512_main200_citrusA_ev-hard | HARD (code-enforced) | 190 | 0.347 | 0.300 | -0.047 | 2 | 11 | 0.022 |
+| 20261011_1528_main180_zenodo_ev-on | ON (prompt rule) | 180 | 0.256 | 0.222 | -0.033 | 10 | 16 | 0.327 |
 
 ## 2. Conditions compared on the same images (shared R1)
 
 - **ON (prompt rule)** vs **OFF (no rule)**: only-second-right 4, only-first-right 5, McNemar p = 1.000
 - **ON (prompt rule)** vs **HARD (code-enforced)**: only-second-right 3, only-first-right 7, McNemar p = 0.344
 - **OFF (no rule)** vs **HARD (code-enforced)**: only-second-right 3, only-first-right 6, McNemar p = 0.508
+- **ON (prompt rule)** vs **OFF (no rule)**: only-second-right 17, only-first-right 22, McNemar p = 0.522
+- **ON (prompt rule)** vs **HARD (code-enforced)**: only-second-right 28, only-first-right 16, McNemar p = 0.096
+- **OFF (no rule)** vs **HARD (code-enforced)**: only-second-right 34, only-first-right 17, McNemar p = 0.024
 
 ## 3. Individual agents (accuracy R1 → R2 → R3, flips R1→R3)
 
@@ -31,6 +38,18 @@
 | 20260924_1638_main180_zenodo_ev-on | qwen2.5vl:7b | 0.239 | 0.233 | 0.217 | 42 | 3 | 7 |
 | 20260924_1638_main180_zenodo_ev-on | llava:7b | 0.167 | 0.189 | 0.211 | 60 | 10 | 2 |
 | 20260924_1638_main180_zenodo_ev-on | qwen2.5vl:3b | 0.128 | 0.128 | 0.161 | 66 | 12 | 6 |
+| 20261011_1354_main200_citrusA_ev-on | qwen2.5vl:7b | 0.347 | 0.321 | 0.237 | 79 | 16 | 37 |
+| 20261011_1354_main200_citrusA_ev-on | gemma3:4b | 0.242 | 0.226 | 0.268 | 86 | 35 | 30 |
+| 20261011_1354_main200_citrusA_ev-on | moondream:latest | 0.000 | 0.000 | 0.074 | 36 | 14 | 0 |
+| 20261011_1429_main200_citrusA_ev-off | qwen2.5vl:7b | 0.347 | 0.305 | 0.211 | 86 | 17 | 43 |
+| 20261011_1429_main200_citrusA_ev-off | gemma3:4b | 0.242 | 0.226 | 0.211 | 48 | 17 | 23 |
+| 20261011_1429_main200_citrusA_ev-off | moondream:latest | 0.000 | 0.005 | 0.047 | 25 | 9 | 0 |
+| 20261011_1512_main200_citrusA_ev-hard | qwen2.5vl:7b | 0.347 | 0.300 | 0.300 | 11 | 1 | 10 |
+| 20261011_1512_main200_citrusA_ev-hard | gemma3:4b | 0.242 | 0.232 | 0.237 | 82 | 28 | 29 |
+| 20261011_1512_main200_citrusA_ev-hard | moondream:latest | 0.000 | 0.000 | 0.053 | 30 | 10 | 0 |
+| 20261011_1528_main180_zenodo_ev-on | gemma3:4b | 0.256 | 0.261 | 0.183 | 44 | 14 | 12 |
+| 20261011_1528_main180_zenodo_ev-on | moondream:latest | 0.000 | 0.000 | 0.000 | 2 | 1 | 0 |
+| 20261011_1528_main180_zenodo_ev-on | qwen2.5vl:7b | 0.000 | 0.000 | 0.000 | 0 | 0 | 0 |
 
 ## 4. Rule compliance and convergence
 
@@ -40,6 +59,10 @@
 | 20260924_0018_main200_citrusA_ev-off | 168 | 144 (86%) | - | 12% | 62% | 60 |
 | 20260924_1014_main200_citrusA_ev-hard | 33 | 0 (0%) | 207 | 12% | 23% | 50 |
 | 20260924_1638_main180_zenodo_ev-on | 195 | 129 (66%) | 0 | 32% | 57% | 41 |
+| 20261011_1354_main200_citrusA_ev-on | 209 | 118 (56%) | 0 | 0% | 5% | 24 |
+| 20261011_1429_main200_citrusA_ev-off | 169 | 114 (67%) | 0 | 0% | 7% | 5 |
+| 20261011_1512_main200_citrusA_ev-hard | 125 | 32 (26%) | 83 | 0% | 3% | 24 |
+| 20261011_1528_main180_zenodo_ev-on | 52 | 36 (69%) | 0 | 0% | 0% | 0 |
 
 ## 5. Per class accuracy (before → after) and what the group answered
 
@@ -78,3 +101,30 @@
 - Red Scale Sequelae (n=15): 0.00 → 0.00  | final answers: Greasy Spot 10, Healthy 2, Leaf Miner 1, Iron Deficiency 1
 - Texas Mite (n=15): 0.00 → 0.00  | final answers: Healthy 14, Greasy Spot 1
 - Zinc Deficiency (n=15): 0.00 → 0.00  | final answers: Healthy 5, Magnesium Deficiency 4, Greening 3, Iron Deficiency 2
+
+**20261011_1354_main200_citrusA_ev-on**
+
+- Black Spot (n=50): 0.20 → 0.50  | final answers: Black Spot 25, Greening 18, Canker 7
+- Canker (n=50): 0.00 → 0.00  | final answers: Black Spot 47, Greening 3
+- Greening (n=50): 0.92 → 0.40  | final answers: Black Spot 27, Greening 20, Canker 3
+- Healthy (n=40): 0.25 → 0.00  | final answers: Black Spot 37, Greening 2, Canker 1
+
+**20261011_1429_main200_citrusA_ev-off**
+
+- Black Spot (n=50): 0.20 → 0.54  | final answers: Black Spot 27, Greening 17, Canker 6
+- Canker (n=50): 0.00 → 0.00  | final answers: Black Spot 48, Greening 2
+- Greening (n=50): 0.92 → 0.26  | final answers: Black Spot 33, Greening 13, Canker 3, Healthy 1
+- Healthy (n=40): 0.25 → 0.00  | final answers: Black Spot 34, Greening 4, Canker 2
+
+**20261011_1512_main200_citrusA_ev-hard**
+
+- Black Spot (n=50): 0.20 → 0.24  | final answers: Greening 35, Black Spot 12, Canker 3
+- Canker (n=50): 0.00 → 0.00  | final answers: Black Spot 44, Greening 6
+- Greening (n=50): 0.92 → 0.90  | final answers: Greening 45, Black Spot 5
+- Healthy (n=40): 0.25 → 0.00  | final answers: Greening 20, Black Spot 19, Canker 1
+
+**20261011_1528_main180_zenodo_ev-on**
+
+- Images (n=60): 0.77 → 0.55  | final answers: Images 47, Masks 12, Rois 1
+- Masks (n=60): 0.00 → 0.12  | final answers: Images 49, Masks 11
+- Rois (n=60): 0.00 → 0.00  | final answers: Images 42, Masks 18
