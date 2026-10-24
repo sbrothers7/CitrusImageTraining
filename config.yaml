@@ -54,7 +54,7 @@ train:
   learning_rate: 0.0003
   weight_decay: 0.0001
   early_stop_patience: 7   # 검증 성능이 N번 연속 안 오르면 중단
-  num_workers: 0           # Windows에서는 0을 권장 (0이 아니면 오류 날 수 있음)
+  num_workers: 6           # Linux: 병렬 데이터 로딩 (Windows에서는 0을 권장)
 
   # 데이터 증강 (학습 시에만 적용)
   augment:

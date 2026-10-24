@@ -1,0 +1,25 @@
+{
+ "crop": "Citrus",
+ "source": "AI Hub dataSetSn=635, '고품질 과수 작물 통합 데이터' TS1/VS1 (Citrus unshiu, Jeju open-field, Training+Validation merged, leaves only)",
+ "counts": {
+  "Leaf Canker": 8597,
+  "Leaf Citrus Mite": 1633,
+  "Leaf Aphid": 1726,
+  "Healthy": 2210
+ },
+ "classes": {
+  "Leaf Canker": [
+   "jeju/Leaf Canker"
+  ],
+  "Leaf Citrus Mite": [
+   "jeju/Leaf Citrus Mite"
+  ],
+  "Leaf Aphid": [
+   "jeju/Leaf Aphid"
+  ],
+  "Healthy": [
+   "jeju/Leaf Healthy"
+  ]
+ },
+ "paths_relative_to": "CITRUS_DATA (default: ~/citrus-data on macOS/Linux, C:/citrus-data on Windows)"
+}

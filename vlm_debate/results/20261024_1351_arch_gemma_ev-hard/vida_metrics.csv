@@ -1,0 +1,4 @@
+﻿agent,n,crop_acc,disease_acc,combined_acc,parse_fail_pct,mean_confidence,reasoning_quality,plausibility
+qwen2.5vl:7b,190,1.0,0.384,0.384,0.0,0.942,,
+qwen2.5vl:3b,190,1.0,0.358,0.358,0.0,0.84,,
+gemma3:4b,190,1.0,0.242,0.242,0.0,0.942,,

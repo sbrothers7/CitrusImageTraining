@@ -57,6 +57,12 @@ class GradCAM:
     def __init__(self, model: nn.Module, target_layer: nn.Module | None = None):
         self.model = model
         self.model.eval()
+        # 일부 모델(MobileNetV3 등)은 활성화 함수를 inplace=True로 씁니다.
+        # Grad-CAM의 backward hook이 감싼 텐서를 inplace로 덮어쓰면
+        # autograd가 깨지므로, hook을 걸기 전에 전부 꺼 둡니다.
+        for module in model.modules():
+            if hasattr(module, "inplace"):
+                module.inplace = False
         self.target_layer = target_layer or find_last_conv_layer(model)
         self.activations = None
         self.gradients = None

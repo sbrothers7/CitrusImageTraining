@@ -1,20 +1,56 @@
 {
  "crop": "Citrus",
- "source": "Zenodo 8294078 CitrusUAT (C. sinensis)",
+ "source": "Zenodo 8294078 CitrusUAT (C. sinensis), Images resized to 768px",
  "counts": {
-  "Images": 953,
-  "Masks": 953,
-  "Rois": 953
+  "Leaf Miner": 100,
+  "Iron Deficiency": 100,
+  "Greasy Spot": 100,
+  "Greening": 43,
+  "Healthy": 100,
+  "Magnesium Deficiency": 100,
+  "Manganese Deficiency": 30,
+  "Nitrogen Deficiency": 50,
+  "Red Scale": 30,
+  "Red Scale Sequelae": 100,
+  "Texas Mite": 100,
+  "Zinc Deficiency": 100
  },
  "classes": {
-  "Images": [
-   "zenodo_8294078/CitrusUAT_dataset/CitrusUAT_dataset/Images"
+  "Greasy Spot": [
+   "zenodo_768/Greasy Spot"
   ],
-  "Masks": [
-   "zenodo_8294078/CitrusUAT_dataset/CitrusUAT_dataset/Masks"
+  "Greening": [
+   "zenodo_768/Greening"
   ],
-  "Rois": [
-   "zenodo_8294078/CitrusUAT_dataset/CitrusUAT_dataset/ROIs"
+  "Healthy": [
+   "zenodo_768/Healthy"
+  ],
+  "Iron Deficiency": [
+   "zenodo_768/Iron Deficiency"
+  ],
+  "Leaf Miner": [
+   "zenodo_768/Leaf Miner"
+  ],
+  "Magnesium Deficiency": [
+   "zenodo_768/Magnesium Deficiency"
+  ],
+  "Manganese Deficiency": [
+   "zenodo_768/Manganese Deficiency"
+  ],
+  "Nitrogen Deficiency": [
+   "zenodo_768/Nitrogen Deficiency"
+  ],
+  "Red Scale": [
+   "zenodo_768/Red Scale"
+  ],
+  "Red Scale Sequelae": [
+   "zenodo_768/Red Scale Sequelae"
+  ],
+  "Texas Mite": [
+   "zenodo_768/Texas Mite"
+  ],
+  "Zinc Deficiency": [
+   "zenodo_768/Zinc Deficiency"
   ]
  }
 }
