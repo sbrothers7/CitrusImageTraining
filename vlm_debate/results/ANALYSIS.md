@@ -1,4 +1,4 @@
-# Analysis — 2026-10-24 14:12
+# Analysis — 2026-10-24 17:18
 
 ## 1. Debate effect per run (R1 weighted vote -> R3 weighted vote)
 
@@ -14,8 +14,11 @@
 | 20261011_1528_main180_zenodo_ev-on | ON (prompt rule) | 180 | 0.256 | 0.222 | -0.033 | 10 | 16 | 0.327 |
 | 20261017_1057_main200_citrusA_ev-on | ON (prompt rule) | 190 | 0.379 | 0.384 | +0.005 | 4 | 3 | 1.000 |
 | 20261017_1127_main200_citrusA_ev-off | OFF (no rule) | 190 | 0.379 | 0.400 | +0.021 | 8 | 4 | 0.388 |
+| 20261017_1147_main200_jeju_ev-on | ON (prompt rule) | 190 | 0.358 | 0.347 | -0.011 | 6 | 8 | 0.791 |
 | 20261017_1150_main200_citrusA_ev-hard | HARD (code-enforced) | 190 | 0.379 | 0.379 | +0.000 | 7 | 7 | 1.000 |
 | 20261017_1407_main180_zenodo_ev-on | ON (prompt rule) | 180 | 0.206 | 0.222 | +0.017 | 5 | 2 | 0.453 |
+| 20261017_2145_main200_jeju_ev-hard | HARD (code-enforced) | 190 | 0.358 | 0.332 | -0.026 | 2 | 7 | 0.180 |
+| 20261017_2336_main200_jeju_ev-off | OFF (no rule) | 190 | 0.358 | 0.337 | -0.021 | 7 | 11 | 0.481 |
 | 20261024_1155_arch_granite_ev-on | ON (prompt rule) | 190 | 0.389 | 0.379 | -0.011 | 8 | 10 | 0.815 |
 | 20261024_1221_arch_granite_ev-off | OFF (no rule) | 190 | 0.389 | 0.400 | +0.011 | 8 | 6 | 0.791 |
 | 20261024_1241_arch_granite_ev-hard | HARD (code-enforced) | 190 | 0.389 | 0.384 | -0.005 | 8 | 9 | 1.000 |
@@ -34,6 +37,9 @@
 - **ON (prompt rule)** vs **OFF (no rule)**: only-second-right 7, only-first-right 4, McNemar p = 0.549
 - **ON (prompt rule)** vs **HARD (code-enforced)**: only-second-right 6, only-first-right 7, McNemar p = 1.000
 - **OFF (no rule)** vs **HARD (code-enforced)**: only-second-right 6, only-first-right 10, McNemar p = 0.454
+- **ON (prompt rule)** vs **HARD (code-enforced)**: only-second-right 6, only-first-right 9, McNemar p = 0.607
+- **ON (prompt rule)** vs **OFF (no rule)**: only-second-right 5, only-first-right 7, McNemar p = 0.774
+- **HARD (code-enforced)** vs **OFF (no rule)**: only-second-right 8, only-first-right 7, McNemar p = 1.000
 - **ON (prompt rule)** vs **OFF (no rule)**: only-second-right 9, only-first-right 5, McNemar p = 0.424
 - **ON (prompt rule)** vs **HARD (code-enforced)**: only-second-right 6, only-first-right 5, McNemar p = 1.000
 - **OFF (no rule)** vs **HARD (code-enforced)**: only-second-right 5, only-first-right 8, McNemar p = 0.581
@@ -75,12 +81,21 @@
 | 20261017_1127_main200_citrusA_ev-off | qwen2.5vl:7b | 0.395 | 0.416 | 0.395 | 48 | 16 | 16 |
 | 20261017_1127_main200_citrusA_ev-off | qwen2.5vl:3b | 0.363 | 0.363 | 0.368 | 24 | 5 | 4 |
 | 20261017_1127_main200_citrusA_ev-off | llava:7b | 0.274 | 0.400 | 0.437 | 79 | 40 | 9 |
+| 20261017_1147_main200_jeju_ev-on | qwen2.5vl:3b | 0.347 | 0.358 | 0.342 | 26 | 5 | 8 |
+| 20261017_1147_main200_jeju_ev-on | qwen2.5vl:7b | 0.337 | 0.337 | 0.332 | 16 | 3 | 4 |
+| 20261017_1147_main200_jeju_ev-on | llava:7b | 0.263 | 0.374 | 0.374 | 66 | 27 | 6 |
 | 20261017_1150_main200_citrusA_ev-hard | qwen2.5vl:7b | 0.395 | 0.384 | 0.374 | 5 | 0 | 4 |
 | 20261017_1150_main200_citrusA_ev-hard | qwen2.5vl:3b | 0.363 | 0.347 | 0.347 | 28 | 5 | 8 |
 | 20261017_1150_main200_citrusA_ev-hard | llava:7b | 0.274 | 0.279 | 0.295 | 8 | 5 | 1 |
 | 20261017_1407_main180_zenodo_ev-on | qwen2.5vl:7b | 0.244 | 0.228 | 0.222 | 29 | 1 | 5 |
 | 20261017_1407_main180_zenodo_ev-on | llava:7b | 0.178 | 0.211 | 0.211 | 66 | 10 | 4 |
 | 20261017_1407_main180_zenodo_ev-on | qwen2.5vl:3b | 0.139 | 0.144 | 0.183 | 58 | 10 | 2 |
+| 20261017_2145_main200_jeju_ev-hard | qwen2.5vl:3b | 0.347 | 0.358 | 0.342 | 24 | 5 | 8 |
+| 20261017_2145_main200_jeju_ev-hard | qwen2.5vl:7b | 0.337 | 0.337 | 0.326 | 6 | 1 | 3 |
+| 20261017_2145_main200_jeju_ev-hard | llava:7b | 0.263 | 0.295 | 0.295 | 11 | 6 | 0 |
+| 20261017_2336_main200_jeju_ev-off | qwen2.5vl:3b | 0.347 | 0.358 | 0.342 | 19 | 5 | 8 |
+| 20261017_2336_main200_jeju_ev-off | qwen2.5vl:7b | 0.337 | 0.342 | 0.326 | 29 | 4 | 6 |
+| 20261017_2336_main200_jeju_ev-off | llava:7b | 0.263 | 0.374 | 0.353 | 66 | 24 | 7 |
 | 20261024_1155_arch_granite_ev-on | qwen2.5vl:3b | 0.395 | 0.389 | 0.368 | 54 | 13 | 18 |
 | 20261024_1155_arch_granite_ev-on | qwen2.5vl:7b | 0.363 | 0.395 | 0.432 | 35 | 22 | 9 |
 | 20261024_1155_arch_granite_ev-on | granite3.2-vision:latest | 0.358 | 0.353 | 0.326 | 13 | 3 | 9 |
@@ -114,8 +129,11 @@
 | 20261011_1528_main180_zenodo_ev-on | 52 | 36 (69%) | 0 | 0% | 0% | 0 |
 | 20261017_1057_main200_citrusA_ev-on | 146 | 123 (84%) | 0 | 18% | 72% | 62 |
 | 20261017_1127_main200_citrusA_ev-off | 153 | 121 (79%) | 0 | 18% | 69% | 58 |
+| 20261017_1147_main200_jeju_ev-on | 111 | 81 (73%) | 0 | 53% | 73% | 21 |
 | 20261017_1150_main200_citrusA_ev-hard | 41 | 0 (0%) | 183 | 18% | 25% | 58 |
 | 20261017_1407_main180_zenodo_ev-on | 173 | 116 (67%) | 0 | 32% | 59% | 42 |
+| 20261017_2145_main200_jeju_ev-hard | 42 | 0 (0%) | 106 | 53% | 53% | 25 |
+| 20261017_2336_main200_jeju_ev-off | 121 | 100 (83%) | 0 | 53% | 77% | 37 |
 | 20261024_1155_arch_granite_ev-on | 113 | 46 (41%) | 0 | 15% | 44% | 73 |
 | 20261024_1221_arch_granite_ev-off | 80 | 32 (40%) | 0 | 15% | 36% | 93 |
 | 20261024_1241_arch_granite_ev-hard | 62 | 0 (0%) | 62 | 15% | 35% | 78 |
@@ -202,6 +220,13 @@
 - Greening (n=50): 0.58 → 0.68  | final answers: Greening 34, Healthy 13, Black Spot 3
 - Healthy (n=40): 0.85 → 0.75  | final answers: Healthy 30, Greening 10
 
+**20261017_1147_main200_jeju_ev-on**
+
+- Aphid (n=50): 0.46 → 0.46  | final answers: Aphid 23, Healthy 18, Citrus Red Mite 8, Canker 1
+- Canker (n=50): 0.10 → 0.02  | final answers: Citrus Red Mite 33, Healthy 15, Aphid 1, Canker 1
+- Citrus Red Mite (n=50): 0.00 → 0.04  | final answers: Healthy 47, Citrus Red Mite 2, Canker 1
+- Healthy (n=40): 1.00 → 1.00  | final answers: Healthy 40
+
 **20261017_1150_main200_citrusA_ev-hard**
 
 - Black Spot (n=50): 0.18 → 0.20  | final answers: Greening 29, Healthy 10, Black Spot 10, Canker 1
@@ -223,6 +248,20 @@
 - Red Scale Sequelae (n=15): 0.00 → 0.00  | final answers: Greasy Spot 13, Iron Deficiency 1, Healthy 1
 - Texas Mite (n=15): 0.00 → 0.00  | final answers: Healthy 15
 - Zinc Deficiency (n=15): 0.00 → 0.00  | final answers: Greasy Spot 5, Magnesium Deficiency 4, Healthy 4, Iron Deficiency 2
+
+**20261017_2145_main200_jeju_ev-hard**
+
+- Aphid (n=50): 0.46 → 0.42  | final answers: Aphid 21, Healthy 20, Citrus Red Mite 9
+- Canker (n=50): 0.10 → 0.08  | final answers: Healthy 24, Citrus Red Mite 21, Canker 4, Aphid 1
+- Citrus Red Mite (n=50): 0.00 → 0.00  | final answers: Healthy 48, Canker 2
+- Healthy (n=40): 1.00 → 0.95  | final answers: Healthy 38, Citrus Red Mite 2
+
+**20261017_2336_main200_jeju_ev-off**
+
+- Aphid (n=50): 0.46 → 0.42  | final answers: Aphid 21, Healthy 18, Citrus Red Mite 10, Canker 1
+- Canker (n=50): 0.10 → 0.06  | final answers: Citrus Red Mite 30, Healthy 16, Canker 3, Aphid 1
+- Citrus Red Mite (n=50): 0.00 → 0.00  | final answers: Healthy 49, Canker 1
+- Healthy (n=40): 1.00 → 1.00  | final answers: Healthy 40
 
 **20261024_1155_arch_granite_ev-on**
 
