@@ -1,0 +1,1050 @@
+[
+ {
+  "id": "00_A-case_Blackspot",
+  "dataset": "A-case",
+  "gt": "Black spot",
+  "source": "b (86).png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       57.792,
+       81.536,
+       193.536,
+       354.816
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [129, 182, 432, 792], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 45.9
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 10.3
+   }
+  }
+ },
+ {
+  "id": "01_A-case_greening",
+  "dataset": "A-case",
+  "gt": "greening",
+  "source": "g (96).png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       17.024,
+       118.72,
+       381.696,
+       296.576
+      ],
+      "label": "healthy leaf"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [38, 265, 852, 662], \"label\": \"healthy leaf\"}\n]\n```",
+    "sec": 9.4
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 7.8
+   }
+  }
+ },
+ {
+  "id": "02_A_BlackSpot",
+  "dataset": "A",
+  "gt": "Black Spot",
+  "source": "b (238).png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       90.496,
+       38.528,
+       248.64,
+       351.68
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [202, 86, 555, 785], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.4
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [
+     {
+      "box": [
+       91.392,
+       38.08,
+       249.088,
+       351.232
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\n        \"bbox_2d\": [204, 85, 556, 784], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 7.7
+   }
+  }
+ },
+ {
+  "id": "03_A_BlackSpot",
+  "dataset": "A",
+  "gt": "Black Spot",
+  "source": "b (177).png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       53.312,
+       33.6,
+       318.08,
+       244.16
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       154.56,
+       232.96,
+       280.0,
+       291.2
+      ],
+      "label": "discoloured or abnormal region"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [119, 75, 710, 545], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [345, 520, 625, 650], \"label\": \"discoloured or abnormal region\"}\n]\n```",
+    "sec": 9.9
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.4
+   }
+  }
+ },
+ {
+  "id": "04_A_BlackSpot",
+  "dataset": "A",
+  "gt": "Black Spot",
+  "source": "b (264).png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       51.52,
+       71.232,
+       381.696,
+       308.224
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [115, 159, 852, 688], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 8.7
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.3
+   }
+  }
+ },
+ {
+  "id": "05_A_BlackSpot",
+  "dataset": "A",
+  "gt": "Black Spot",
+  "source": "bl (2).png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       196.224,
+       143.36,
+       329.28,
+       291.2
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [438, 320, 735, 650], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.7
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [
+     {
+      "box": [
+       166.656,
+       122.752,
+       304.64,
+       224.0
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [372, 274, 680, 500], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 8.6
+   }
+  }
+ },
+ {
+  "id": "06_A_Canker",
+  "dataset": "A",
+  "gt": "Canker",
+  "source": "11.pn.png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       150.08,
+       108.416,
+       255.36,
+       350.336
+      ],
+      "label": "diseased lesions"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [335, 242, 570, 782], \"label\": \"diseased lesions\"}\n]\n```",
+    "sec": 8.7
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [
+     {
+      "box": [
+       14.784,
+       18.816,
+       277.76,
+       380.8
+      ],
+      "label": "diseased lesion, spot, discoloured or abnormal region on the"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [33, 42, 620, 850], \"label\": \"diseased lesion, spot, discoloured or abnormal region on the leaf\"}\n]\n```",
+    "sec": 8.8
+   }
+  }
+ },
+ {
+  "id": "07_A_Canker",
+  "dataset": "A",
+  "gt": "Canker",
+  "source": "115.p.png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       24.64,
+       29.12,
+       311.36,
+       342.72
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [55, 65, 695, 765], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.6
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [
+     {
+      "box": [
+       24.192,
+       29.12,
+       313.6,
+       343.168
+      ],
+      "label": "diseased lesion, spot, discoloured or abnormal region"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [54, 65, 700, 766], \"label\": \"diseased lesion, spot, discoloured or abnormal region\"}\n]\n```",
+    "sec": 8.5
+   }
+  }
+ },
+ {
+  "id": "08_A_Canker",
+  "dataset": "A",
+  "gt": "Canker",
+  "source": "76.pn.png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       48.384,
+       78.4,
+       325.696,
+       313.152
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [108, 175, 727, 699], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.6
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [
+     {
+      "box": [
+       0,
+       76.608,
+       327.04,
+       314.496
+      ],
+      "label": "diseased lesion, spot, discoloured or abnormal region on the"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [0, 171, 730, 702], \"label\": \"diseased lesion, spot, discoloured or abnormal region on the leaf\"}\n]\n```",
+    "sec": 8.6
+   }
+  }
+ },
+ {
+  "id": "09_A_Canker",
+  "dataset": "A",
+  "gt": "Canker",
+  "source": "120.p.png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       26.88,
+       119.616,
+       352.128,
+       342.272
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [60, 267, 786, 764], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.9
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [
+     {
+      "box": [
+       26.88,
+       119.168,
+       351.68,
+       342.272
+      ],
+      "label": "diseased lesion, spot, discoloured or abnormal region on the"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [60, 266, 785, 764], \"label\": \"diseased lesion, spot, discoloured or abnormal region on the leaf\"}\n]\n```",
+    "sec": 9.0
+   }
+  }
+ },
+ {
+  "id": "10_A_Greening",
+  "dataset": "A",
+  "gt": "Greening",
+  "source": "g (183).png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       29.12,
+       50.176,
+       363.776,
+       322.56
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [65, 112, 812, 720], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.1
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.7
+   }
+  }
+ },
+ {
+  "id": "11_A_Greening",
+  "dataset": "A",
+  "gt": "Greening",
+  "source": "g (5).png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       105.28,
+       53.76,
+       237.44,
+       361.536
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [235, 120, 530, 807], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.9
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.7
+   }
+  }
+ },
+ {
+  "id": "12_A_Greening",
+  "dataset": "A",
+  "gt": "Greening",
+  "source": "g (111).png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       98.56,
+       48.832,
+       256.256,
+       347.2
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [220, 109, 572, 775], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 10.1
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.7
+   }
+  }
+ },
+ {
+  "id": "13_A_Greening",
+  "dataset": "A",
+  "gt": "Greening",
+  "source": "g (31).png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       78.848,
+       39.872,
+       358.4,
+       369.6
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [176, 89, 800, 825], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 11.6
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 9.6
+   }
+  }
+ },
+ {
+  "id": "14_A_Healthy",
+  "dataset": "A",
+  "gt": "Healthy",
+  "source": "21.pn.png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       41.216,
+       221.76,
+       56.448,
+       244.608
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [92, 495, 126, 546], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.4
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.6
+   }
+  }
+ },
+ {
+  "id": "15_A_Healthy",
+  "dataset": "A",
+  "gt": "Healthy",
+  "source": "11.pn.png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       246.4,
+       73.92,
+       272.384,
+       105.28
+      ],
+      "label": "discoloured region"
+     },
+     {
+      "box": [
+       246.4,
+       73.92,
+       272.384,
+       105.28
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [550, 165, 608, 235], \"label\": \"discoloured region\"},\n    {\"bbox_2d\": [550, 165, 608, 235], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 10.1
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.6
+   }
+  }
+ },
+ {
+  "id": "16_A_Healthy",
+  "dataset": "A",
+  "gt": "Healthy",
+  "source": "14.pn.png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       57.344,
+       90.496,
+       377.664,
+       340.032
+      ],
+      "label": "healthy leaf"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [128, 202, 843, 759], \"label\": \"healthy leaf\"}\n]\n```",
+    "sec": 9.7
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.6
+   }
+  }
+ },
+ {
+  "id": "17_A_Healthy",
+  "dataset": "A",
+  "gt": "Healthy",
+  "source": "34.pn.png",
+  "W": 448,
+  "H": 448,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [],
+    "raw": "```json\n[]\n```",
+    "sec": 9.2
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.8
+   }
+  }
+ },
+ {
+  "id": "18_B_Greening",
+  "dataset": "B",
+  "gt": "Greening",
+  "source": "HLB_027.jpg",
+  "W": 448,
+  "H": 336,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       117.824,
+       98.448,
+       319.872,
+       164.64
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [263, 293, 714, 490], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.9
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.8
+   }
+  }
+ },
+ {
+  "id": "19_B_Greening",
+  "dataset": "B",
+  "gt": "Greening",
+  "source": "HLB_005.jpg",
+  "W": 448,
+  "H": 252,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       378.56,
+       80.388,
+       403.2,
+       100.548
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [845, 319, 900, 399], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.9
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.8
+   }
+  }
+ },
+ {
+  "id": "20_B_GreasySpot",
+  "dataset": "B",
+  "gt": "Greasy Spot",
+  "source": "Greasy_spot_031.jpg",
+  "W": 448,
+  "H": 336,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       88.704,
+       83.328,
+       377.216,
+       159.6
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [198, 248, 842, 475], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.7
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [
+     {
+      "box": [
+       200.704,
+       84.0,
+       300.16,
+       164.304
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [448, 250, 670, 489], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.0
+   }
+  }
+ },
+ {
+  "id": "21_B_GreasySpot",
+  "dataset": "B",
+  "gt": "Greasy Spot",
+  "source": "Greasy_spot_012.jpg",
+  "W": 448,
+  "H": 336,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       122.304,
+       88.368,
+       349.888,
+       182.112
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [273, 263, 781, 542], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.9
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [
+     {
+      "box": [
+       122.304,
+       87.024,
+       350.336,
+       182.448
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [273, 259, 782, 543], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 9.0
+   }
+  }
+ },
+ {
+  "id": "22_B_LeafMiner",
+  "dataset": "B",
+  "gt": "Leaf Miner",
+  "source": "Citrus_leafminer_071.jpg",
+  "W": 448,
+  "H": 336,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       172.48,
+       160.608,
+       183.68,
+       173.712
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       420.0,
+       426.0,
+       448,
+       336
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       202.496,
+       143.808,
+       215.04,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       215.04,
+       143.808,
+       227.584,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       227.584,
+       143.808,
+       240.128,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       240.128,
+       143.808,
+       252.672,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       252.672,
+       143.808,
+       265.216,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       265.216,
+       143.808,
+       277.76,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       277.76,
+       143.808,
+       290.304,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       290.304,
+       143.808,
+       302.848,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       302.848,
+       143.808,
+       315.392,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       315.392,
+       143.808,
+       327.936,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       327.936,
+       143.808,
+       340.48,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       340.48,
+       143.808,
+       353.024,
+       151.2
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       353.024,
+       143.808,
+       365.568,
+       151.2
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [385, 478, 410, 517], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [420, 426, 452, 455], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [452, 428, 480, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [480, 428, 508, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [508, 428, 536, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [536, 428, 564, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [564, 428, 592, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [592, 428, 620, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [620, 428, 648, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [648, 428, 676, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [676, 428, 704, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [704, 428, 732, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [732, 428, 760, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [760, 428, 788, 450], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [788, 428, 816, 450], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 16.8
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [
+     {
+      "box": [
+       204.288,
+       143.472,
+       214.592,
+       148.512
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       188.16,
+       163.296,
+       198.464,
+       171.024
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       275.072,
+       135.744,
+       296.576,
+       148.512
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       287.616,
+       153.216,
+       301.952,
+       163.296
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       326.592,
+       135.744,
+       344.512,
+       148.512
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       338.688,
+       153.216,
+       353.024,
+       163.296
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [456, 427, 479, 442], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [420, 486, 443, 509], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [614, 404, 662, 442], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [642, 456, 674, 486], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [729, 404, 769, 442], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [756, 456, 788, 486], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 10.5
+   }
+  }
+ },
+ {
+  "id": "23_B_LeafMiner",
+  "dataset": "B",
+  "gt": "Leaf Miner",
+  "source": "Citrus_leafminer_055.jpg",
+  "W": 448,
+  "H": 336,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       201.6,
+       88.032,
+       255.36,
+       100.8
+      ],
+      "label": "diseased lesion"
+     },
+     {
+      "box": [
+       330.624,
+       111.552,
+       374.528,
+       134.4
+      ],
+      "label": "diseased lesion"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [450, 262, 570, 300], \"label\": \"diseased lesion\"},\n    {\"bbox_2d\": [738, 332, 836, 400], \"label\": \"diseased lesion\"}\n]\n```",
+    "sec": 10.6
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.9
+   }
+  }
+ },
+ {
+  "id": "24_B_Healthy",
+  "dataset": "B",
+  "gt": "Healthy",
+  "source": "Healthy_008.jpg",
+  "W": 448,
+  "H": 336,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [],
+    "raw": "```json\n[]\n```",
+    "sec": 9.4
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 8.7
+   }
+  }
+ },
+ {
+  "id": "25_B_Healthy",
+  "dataset": "B",
+  "gt": "Healthy",
+  "source": "Healthy_073.jpg",
+  "W": 448,
+  "H": 336,
+  "models": {
+   "qwen2.5vl:7b": {
+    "boxes": [
+     {
+      "box": [
+       338.0,
+       344.0,
+       350.0,
+       336
+      ],
+      "label": "small brown spot"
+     }
+    ],
+    "raw": "```json\n[\n    {\"bbox_2d\": [338, 344, 350, 356], \"label\": \"small brown spot\"}\n]\n```",
+    "sec": 10.1
+   },
+   "qwen2.5vl:3b": {
+    "boxes": [],
+    "raw": "[]",
+    "sec": 9.1
+   }
+  }
+ }
+]

@@ -13,3 +13,6 @@ tools/selftest/fake_data/
 tools/selftest/mock_out/
 results/*/checkpoints/
 .venv/
+# AI Hub images must never be uploaded (license)
+results/aihub_samples/
+*aihub*.jpg

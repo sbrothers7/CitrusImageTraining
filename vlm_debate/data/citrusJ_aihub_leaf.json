@@ -1,0 +1,25 @@
+{
+ "crop": "Citrus",
+ "source": "AI Hub 635 (Jeju C. unshiu, Validation split, leaves), images resized to 768px",
+ "counts": {
+  "Healthy": 245,
+  "Canker": 955,
+  "Citrus Red Mite": 181,
+  "Aphid": 192
+ },
+ "classes": {
+  "Healthy": [
+   "aihub_768/잎_정상"
+  ],
+  "Canker": [
+   "aihub_768/잎_궤양병"
+  ],
+  "Citrus Red Mite": [
+   "aihub_768/잎_귤응애"
+  ],
+  "Aphid": [
+   "aihub_768/잎_진딧물"
+  ]
+ },
+ "paths_relative_to": "CITRUS_DATA (default: ~/citrus-data on macOS/Linux, C:/citrus-data on Windows)"
+}

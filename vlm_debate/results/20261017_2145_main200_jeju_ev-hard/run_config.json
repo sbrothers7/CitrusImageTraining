@@ -1,0 +1,20 @@
+{
+ "dataset_root": "C:\\Users\\peter\\OneDrive\\Desktop\\AI_Renaissance\\citrus-vlm-debate-main\\data\\citrusJ_aihub_leaf.json",
+ "output_dir": "C:\\Users\\peter\\OneDrive\\Desktop\\AI_Renaissance\\citrus-vlm-debate-main\\results\\20261017_2145_main200_jeju_ev-hard",
+ "n_images": 200,
+ "n_debate": 3,
+ "seed": 42,
+ "softmax_temp": 2.0,
+ "mock": false,
+ "use_judge": false,
+ "require_new_evidence": true,
+ "agents": [
+  "llava:7b",
+  "qwen2.5vl:7b",
+  "qwen2.5vl:3b"
+ ],
+ "debate_agents": null,
+ "vida_cache": "C:\\Users\\peter\\OneDrive\\Desktop\\AI_Renaissance\\citrus-vlm-debate-main\\results\\20261017_1147_main200_jeju_ev-on\\vida_raw_bank.json",
+ "enforce_evidence": true,
+ "started": "2026-10-17 21:45:46"
+}

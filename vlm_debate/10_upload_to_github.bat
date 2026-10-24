@@ -44,7 +44,7 @@ if errorlevel 1 "%GIT%" checkout -b %BR% origin/main >> "%LOG%" 2>&1
 "%GIT%" pull origin %BR% >> "%LOG%" 2>&1
 
 echo [3] copy files into vlm_debate
-robocopy "%~dp0." "%DST%\vlm_debate" /E /XD logs _remote __pycache__ fake_data mock_out notes paper .git /XF .env HANDOFF.md *.pyc gitignore_vlm.txt /NFL /NDL /NJH /NJS >> "%LOG%" 2>&1
+robocopy "%~dp0." "%DST%\vlm_debate" /E /XD logs _remote __pycache__ fake_data mock_out notes paper .git aihub_samples checkpoints .venv "Claude outputs" /XF .env HANDOFF.md *.pyc gitignore_vlm.txt _ANALYSIS_main.bak *.bak /NFL /NDL /NJH /NJS >> "%LOG%" 2>&1
 copy /y "%~dp0tools\gitignore_vlm.txt" "%DST%\vlm_debate\.gitignore" >> "%LOG%" 2>&1
 
 echo [4] commit
@@ -55,7 +55,7 @@ if errorlevel 1 "%GIT%" config user.email "peter9167@naver.com"
 "%GIT%" add -A vlm_debate >> "%LOG%" 2>&1
 "%GIT%" update-index --chmod=+x vlm_debate/run.sh >> "%LOG%" 2>&1
 "%GIT%" status --short >> "%LOG%" 2>&1
-"%GIT%" commit -m "Update VLM debate: macOS/Linux support (run.sh), OS-independent data paths" >> "%LOG%" 2>&1
+"%GIT%" commit -m "Add Jeju (AI Hub 635) experiment: download/prepare tools, ON/HARD/OFF results, analysis" >> "%LOG%" 2>&1
 
 echo [5] push (sign in if a window opens)
 "%GIT%" push -u origin %BR% >> "%LOG%" 2>&1

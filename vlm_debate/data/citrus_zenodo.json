@@ -5,8 +5,8 @@
   "Leaf Miner": 100,
   "Iron Deficiency": 100,
   "Greasy Spot": 100,
-  "Greening": 43,
   "Healthy": 100,
+  "Greening": 43,
   "Magnesium Deficiency": 100,
   "Manganese Deficiency": 30,
   "Nitrogen Deficiency": 50,
@@ -52,5 +52,6 @@
   "Zinc Deficiency": [
    "zenodo_768/Zinc Deficiency"
   ]
- }
+ },
+ "paths_relative_to": "CITRUS_DATA (default: ~/citrus-data on macOS/Linux, C:/citrus-data on Windows)"
 }

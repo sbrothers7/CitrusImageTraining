@@ -9,6 +9,11 @@
 #   ./run.sh run ...    임의 실행   예) ./run.sh run --dataset data/jeju.json --n 100 --enforce --tag jeju_hard
 #   ./run.sh analyze    results/ANALYSIS.md 생성
 #   ./run.sh app        웹 콘솔 (http://localhost:8765)
+#   ./run.sh verify-student  학생 CNN 실험 재현 (densenet121, 단일 vs 두 출처, seed 42/1/2)
+#   ./run.sh aihub      AI Hub 635 감귤 데이터 다운로드 (.env 의 AIHUB_APIKEY, ~/Downloads/aihubshell 필요)
+#   ./run.sh aihub-prepare  라벨 전수 검사 + 768px 복사본 + 실험 명세(data/citrusJ_aihub_*.json)
+#   ./run.sh jeju       제주 잎 190장: ON → HARD → OFF (R1 공유) + results/ANALYSIS_jeju.md
+#   ./run.sh jeju-cnn   제주 학습 데이터로 densenet121 학습(seed 42/1/2) → 같은 190장에서 VLM 과 비교
 set -euo pipefail
 cd "$(dirname "$0")"
 export PYTHONUTF8=1 PYTHONIOENCODING=utf-8
@@ -46,6 +51,11 @@ case "$cmd" in
   run)      ensure_deps; ensure_ollama; "$PY" -u tools/run_experiment.py "$@" ;;
   bench)    ensure_deps; ensure_ollama; "$PY" -u tools/bench_models.py "$@" ;;
   analyze)  "$PY" tools/analyze.py ;;
+  verify-student) "${PYTHON:-python3}" -u tools/verify_student_cnn.py "$@" ;;
   app)      ensure_deps; ensure_ollama; "$PY" src/vp_app.py ;;
-  *) sed -n '2,12p' "$0" ;;
+  aihub)    ensure_deps; "$PY" -u tools/aihub_fetch.py "$@" ;;
+  aihub-prepare) ensure_deps; "$PY" -u tools/aihub_prepare.py ;;
+  jeju)     ensure_deps; ensure_ollama; "$PY" -u tools/run_jeju.py ;;
+  jeju-cnn) "${PYTHON:-python3}" -u tools/jeju_cnn.py "$@" ;;
+  *) sed -n '2,17p' "$0" ;;
 esac

@@ -1,0 +1,17 @@
+{
+ "crop": "Citrus",
+ "source": "AI Hub 635 (Jeju C. unshiu, Validation split, fruit), images resized to 768px",
+ "counts": {
+  "Healthy": 255,
+  "Canker": 172
+ },
+ "classes": {
+  "Healthy": [
+   "aihub_768/열매_정상"
+  ],
+  "Canker": [
+   "aihub_768/열매_궤양병"
+  ]
+ },
+ "paths_relative_to": "CITRUS_DATA (default: ~/citrus-data on macOS/Linux, C:/citrus-data on Windows)"
+}

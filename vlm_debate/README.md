@@ -45,23 +45,24 @@ bash run.sh app           # 웹 콘솔 http://localhost:8765
 - 같은 seed 면 Windows·macOS·Linux 에서 **같은 이미지가 뽑히도록** 정렬 순서를 맞춰 두었습니다.
 - Apple Silicon 은 GPU(Metal)를 자동으로 씁니다. 모델 속도는 `bash run.sh bench` 로 확인하세요.
 
-**3. 제주 온주밀감 데이터로 실험하기**
+**3. 제주 온주밀감 데이터 (AI Hub 635) 로 실험하기**
 
-1. 사진을 병해별 폴더로 정리: `~/citrus-data/jeju/Healthy/*.jpg`, `~/citrus-data/jeju/Canker/*.jpg` …
-2. 명세 파일 `data/jeju.json` 작성:
-   ```json
-   { "crop": "Citrus",
-     "classes": { "Healthy": ["jeju/Healthy"], "Canker": ["jeju/Canker"] } }
-   ```
-3. 세 조건을 같은 R1 답으로 실행 (첫 실행의 R1 을 뒤 두 실행이 재사용):
-   ```bash
-   bash run.sh run --dataset data/jeju.json --n 100 --tag jeju_ev-on
-   R1=$(ls -d results/*_jeju_ev-on | tail -1)/vida_raw_bank.json
-   bash run.sh run --dataset data/jeju.json --n 100 --no-evidence --reuse-r1 "$R1" --tag jeju_ev-off
-   bash run.sh run --dataset data/jeju.json --n 100 --enforce     --reuse-r1 "$R1" --tag jeju_ev-hard
-   python3 tools/analyze.py results jeju      # 제주 실행만 모아 분석
-   ```
-   `--n` 은 상한입니다. 층화 추출(병해 80 / 건강 20) 때문에 실제 장수는 클래스별 사진 수에 따라 줄 수 있습니다.
+AI Hub 데이터는 라이선스상 이 저장소에 올리지 않습니다. 각자 받아야 합니다.
+
+1. https://aihub.or.kr 에서 「고품질 과수 작물 통합 데이터」(635) 이용 신청 → 승인 후 API 키 발급
+2. AI Hub 의 `aihubshell` 을 `~/Downloads/aihubshell` 에 저장 (다른 곳이면 `--shell 경로`)
+3. `.env` 에 `AIHUB_APIKEY=키` 한 줄 추가 (`.env` 는 커밋 금지)
+
+```bash
+bash run.sh aihub          # 감귤 4개 파일만(TS1/TL1/VS1/VL1, 약 1.5 GB) → ~/citrus-data/aihub
+bash run.sh aihub-prepare  # 라벨 18,000개 전수 검사, 검증용 2,000장 768px 복사, data/citrusJ_aihub_*.json
+bash run.sh jeju           # 잎 190장(정상 40, 궤양병·귤응애·진딧물 각 50): ON → HARD → OFF, 약 13시간
+bash run.sh jeju-cnn       # 제주 학습용 잎으로 densenet121 학습 → 같은 190장에서 VLM 과 비교 (약 2시간)
+```
+
+중간에 끊겨도 `bash run.sh jeju` 를 다시 실행하면 끝난 조건은 건너뜁니다.
+다른 사진(직접 찍은 제주 사진 등)은 `data/citrusJ_aihub_leaf.json` 과 같은 형식의 명세를 만들어
+`bash run.sh run --dataset data/내명세.json ...` 으로 실행합니다.
 
 ## 실행 순서 (Windows, 더블클릭)
 
@@ -74,6 +75,11 @@ bash run.sh app           # 웹 콘솔 http://localhost:8765
 | `8_main_overnight.bat` | 본 실험 1: 데이터셋 A 190장, 반-아첨 ON → OFF |
 | `9_night2.bat` | 본 실험 2: 데이터셋 A HARD(코드 강제) + 데이터셋 B(Zenodo) ON |
 | `3_run.bat` | 웹 콘솔 (http://localhost:8765) |
+| `13_aihub_download.bat` | AI Hub 635 감귤 데이터 다운로드·압축 해제 (`.env` 의 `AIHUB_APIKEY`, Git for Windows 필요) |
+| `14_aihub_prepare.bat` | 라벨 전수 검사 + 768px 복사본 + 실험 명세 생성 |
+| `15_jeju_overnight.bat` | 제주 잎 190장 ON → HARD → OFF + `results/ANALYSIS_jeju.md` |
+| `17_jeju_cnn.bat` | 제주 학습용 잎 12,593장으로 densenet121 학습(seed 42/1/2) → 같은 190장에서 VLM 과 비교, `results/jeju_cnn.md` (macOS·Linux: `bash run.sh jeju-cnn`) |
+| `11_verify_student_cnn.bat` | 루트의 CNN 실험 재현 검증: densenet121, 단일 출처 vs 두 출처, seed 42/1/2 → `results/verify_student_cnn.md` (macOS·Linux: `bash run.sh verify-student`) |
 
 분석: `py tools\analyze.py` → `results\ANALYSIS.md`
 직접 실행: `py tools\run_experiment.py --dataset data\jeju.json --n 100 --tag jeju_ev-on` (옵션은 아래 macOS·Linux 절과 같음)
@@ -101,11 +107,25 @@ bash run.sh app           # 웹 콘솔 http://localhost:8765
 - 약한 모델(llava:7b)의 향상(0.284 → 0.43)은 HARD 에서 사라짐(→ 0.305) → 향상의 출처는 **근거 없는 동조**
 - 세부: `results/ANALYSIS.md`
 
+## 주요 결과 (제주 온주밀감, AI Hub 635 검증용 잎 190장)
+
+| 조건 | 토론 전 → 후 | Δ | McNemar p | 답 변경 중 새 근거 없음 |
+|---|---|---|---|---|
+| OFF | 0.358 → 0.337 | −0.021 | 0.48 | 100/121 (83%) |
+| ON | 0.358 → 0.347 | −0.011 | 0.79 | 81/111 (73%) |
+| HARD | 0.358 → 0.332 | −0.026 | 0.18 | 0/42 (되돌림 106) |
+
+- 실제 상태별 정답률(ON, 토론 후): 정상 100%, 진딧물 46%, 궤양병 2%(대부분 '귤응애'로 답함), 귤응애 4%(대부분 '정상')
+- llava:7b 만 오름(0.263 → 0.374, ON) — 대부분 qwen2.5vl:3b 의 답을 따라간 변경
+- AI Hub 폴리곤 1,977개는 병변이 아니라 잎·열매 전체 윤곽 → 병변 위치 채점에는 쓸 수 없음
+- 세부: `results/ANALYSIS_jeju.md`, `results/aihub_overview.json`
+
 ## 폴더
 
 ```
 src/        vp_core.py (파이프라인 본체), vp_app.py (웹 콘솔), prepare_dataset.py
-tools/      prepare_all, diagnose, gpu_check, run_experiment, run_main, run_night2, analyze ...
+tools/      prepare_all, diagnose, gpu_check, run_experiment, run_main, run_night2, analyze,
+            aihub_fetch, aihub_prepare, run_jeju ...
 data/       데이터셋 명세 json (이미지는 C:\citrus-data 에 있고 경로만 참조)
 results/    실험별 결과 (CSV, 토론 원문, summary.json, ANALYSIS.md)
 ```
